@@ -1,45 +1,120 @@
-// MPQArchive class, can extract files from MPQ archives. Based on the MPQ format used by Blizzard games.
-
-
-//read header. First 4 bytes are magic number. A = standard, B = user data first and then actual header at mpq_header_offset
-//this should give us the location of the hash table and block table.
-
-
-
-// MPQ uses hashed file names, so we need to use the hash of the file name to find it in the archive. 
-// The hash is a 32-bit integer, and is calculated using a specific algorithm that Blizzard uses. 
-// We can use a precomputed hash table to speed up the process of finding files in the archive.
-
-
-//read hash table. the hash table is used to find files in the archive. it contains the hash of the file name.
-
-//read block table. the block table contains the offset and size of each file in the archive. it also contains a flag that indicates if the file is compressed or not.
-
-//both hash and block table are encrypted using a simple XOR encryption, so we need to decrypt them before we can use them.
-
-//every MPQ file uses an encryption table with the same seed. 1280 pseudo-random 32-bit integers are generated using the seed, and stored in an array.
-//these are then sorted into groups of 256. 5th group onwards is for file decrpytion, first 4 groups are used for hash and block table decryption.
+/**
+ * MPQ Archive Reader
+ * 
+ * Based on mpyq by Aku Kotkavuo
+ * Copyright (c) 2010-2019 Aku Kotkavuo. All rights reserved.
+ * https://github.com/eagleflo/mpyq
+ * 
+ * References:
+ * http://www.zezula.net/en/mpq/mpqformat.html
+ * https://web.archive.org/web/20120222093346/http://wiki.devklog.net/index.php?title=The_MoPaQ_Archive_Format
+ * 
+ * ─────────────────────────────────────────
+ * MPQ File Structure
+ * ─────────────────────────────────────────
+ * magic number (4 bytes)
+ * user data header (optional, only if magic is MPQ\x1b)
+ * header
+ * hash table
+ * block table
+ * file data
+ * 
+ * Magic Number
+ *   MPQ\x1a = standard header at offset 0
+ *   MPQ\x1b = user data header precedes the actual header
+ * 
+ * User Data Header (MPQ\x1b only)
+ *   user_data_size      (4 bytes) - total allocated space for user data
+ *   mpq_header_offset   (4 bytes) - offset to the real MPQ header
+ *   user_data_header_size (4 bytes) - size of the user data content
+ *   user data content   (user_data_header_size bytes)
+ *   For SC2 replays, this content contains the replay header.
+ * 
+ * Header
+ *   Contains the offset and entry count of both the hash and block tables,
+ *   the format version, and the sector size shift.
+ * 
+ * Hash Table
+ *   Used to look up files by name. Each entry contains hash_a, hash_b,
+ *   locale/platform, and a block table index. Files are found by hashing
+ *   the filename twice and scanning for a matching entry.
+ * 
+ * Block Table
+ *   Contains the offset, compressed size, real size, and flags for each
+ *   file. Flags indicate whether a file is compressed, encrypted, or
+ *   stored as a single unit vs multiple sectors.
+ * 
+ * File Data
+ *   Raw file contents. Location and size of each file is found via the
+ *   hash and block tables.
+ * 
+ * ─────────────────────────────────────────
+ * Encryption
+ * ─────────────────────────────────────────
+ * All MPQ archives share the same encryption table — 1280 pseudo-random
+ * 32-bit integers generated from a fixed seed, arranged in 5 groups of 256.
+ * 
+ *   Groups 0-3   used by the hash function for filename lookup and
+ *                generating decryption keys for the tables
+ *   Group 4      used in the stream cipher when decrypting the tables
+ * 
+ * The hash and block tables are encrypted using a stream cipher based on
+ * XOR. The decryption key for each table is derived by hashing the string
+ * "(hash table)" or "(block table)" — these are fixed strings baked into
+ * the MPQ format spec by Blizzard.
+ */
 
 
 //consts
 const ENCRYPTION_TABLE_SEED = 0x00100001;
-const HASH_SEED_1 = 0x7FED7FED;
-const SEED_2 = 0xEEEEEEEE; //used for hash and decryption
-
+const HASH_SEED_1 = 0x7fed7fed;
+const SEED_2 = 0xeeeeeeee; //used for hash and decryption
 
 //bitflags for block table entries
-MPQ_FILE_IMPLODE        = 0x00000100
-MPQ_FILE_COMPRESS       = 0x00000200
-MPQ_FILE_ENCRYPTED      = 0x00010000
-MPQ_FILE_FIX_KEY        = 0x00020000
-MPQ_FILE_SINGLE_UNIT    = 0x01000000
-MPQ_FILE_DELETE_MARKER  = 0x02000000
-MPQ_FILE_SECTOR_CRC     = 0x04000000
-MPQ_FILE_EXISTS         = 0x80000000
+const MPQ_FILE_IMPLODE = 0x00000100;
+const MPQ_FILE_COMPRESS = 0x00000200;
+const MPQ_FILE_ENCRYPTED = 0x00010000;
+const MPQ_FILE_FIX_KEY = 0x00020000;
+const MPQ_FILE_SINGLE_UNIT = 0x01000000;
+const MPQ_FILE_DELETE_MARKER = 0x02000000;
+const MPQ_FILE_SECTOR_CRC = 0x04000000;
+const MPQ_FILE_EXISTS = 0x80000000;
 
+export class MPQArchive {
+	constructor(filename, listfiles) {}
 
+	readHeader() {}
 
-class MPQArchive {
-    constructor(filename, ) {
-    }
+	readTable(table_type) {
+		if (table_type === "hash") {
+		} else if (table_type === "block") {
+		} else {
+			throw new Error("Invalid table type");
+		}
+	}
+
+	readFile(filename) {}
+
+	getHashTableEntry(filename) {}
+
+	extract() {}
+
+	#hash(content, hashtype) {}
+	#decrypt(data, key) {}
+	prepareEncryptionTable() {
+		let encryptionTable = {};
+		let seed = ENCRYPTION_TABLE_SEED;
+		for (let i = 0; i < 256; i++) {
+			let index = i;
+			for (let j = 0; j < 5; j++) {
+				seed = (seed * 125 + 3) % 0x2aaaab;
+				let temp1 = (seed & 0xffff) << 16;
+                seed = (seed * 125 + 3) % 0x2aaaab;
+                let temp2 = (seed & 0xffff);
+                encryptionTable[index] = (temp1 | temp2) >>> 0; //unsigned right shift to convert to uint32
+                index += 256;
+			}
+		}
+        return encryptionTable;
+	}
 }
