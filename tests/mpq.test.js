@@ -67,4 +67,31 @@ describe('MPQArchive class', () => {
         expect(mpq.blockTable[5].real_size).toBe(33413);
         expect(mpq.blockTable[5].flags).toBe(2164261376);
     })
+    test('Reads file data correctly', () => {
+        const mpq = new MPQArchive('tests/fixtures/testreplay.SC2Replay', false);
+        const data = mpq.readFile('(listfile)');
+        console.log(data.toString('utf-8'));
+        expect(data).toBeDefined();
+        expect(data.length).toBe(333);
+        const text = data.toString('utf-8');
+        expect(text).toContain('replay.tracker.events');
+        expect(text).toContain('replay.details');
+
+        const parsedJson =JSON.parse(mpq.readFile('replay.gamemetadata.json').toString('utf-8'));
+        expect(parsedJson).toBeDefined();
+        expect(parsedJson.Title).toBe('10000 Feet LE');
+        expect(parsedJson.GameVersion).toBe('5.0.15.96592');
+        expect(parsedJson.Duration).toBe(366);
+        expect(parsedJson.Players).toHaveLength(2);
+        expect(parsedJson.Players[0].Result).toBe('Win');
+        expect(parsedJson.Players[0].SelectedRace).toBe('Zerg');
+        expect(parsedJson.Players[1].Result).toBe('Loss');
+        expect(parsedJson.Players[1].AssignedRace).toBe('Prot');
+
+        const replayDetailsLength = mpq.readFile('replay.details').length;
+        expect(replayDetailsLength).toBe(585);
+
+        const replayTrackerEventsLength = mpq.readFile('replay.tracker.events').length;
+        expect(replayTrackerEventsLength).toBe(37891);
+    })
 })

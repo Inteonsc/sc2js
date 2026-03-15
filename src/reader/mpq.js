@@ -65,6 +65,8 @@
  */
 
 import { readFileSync } from 'fs'
+import zlib from 'zlib';
+import compressjs from 'compressjs';
 
 //consts
 const ENCRYPTION_TABLE_SEED = 0x00100001;
@@ -89,10 +91,11 @@ const HashType = {
     HASH_B: 2,
     TABLE: 3
 }
+//TODO: add support for listfiles
 export class MPQArchive {
-	constructor(filename, listfiles) {
-		this.filename = filename;
-		this.file = readFileSync(filename);
+	constructor(replayFileName, listFiles) {
+		this.filename = replayFileName;
+		this.file = readFileSync(replayFileName);
 		this.encryptionTable = this.prepareEncryptionTable();
 		this.header = this.readHeader();
 		this.hashTable = this.readHashTable();
@@ -166,7 +169,7 @@ export class MPQArchive {
 		
 	}
 
-	readFile(filename, forceDecompress = false) {
+	readFile(filename) {
 		let hashEntry = this.getHashTableEntry(filename);
 		let blockEntry = this.blockTable[hashEntry.block_table_index];
 
@@ -188,7 +191,7 @@ export class MPQArchive {
 				if ((blockEntry.flags & MPQ_FILE_COMPRESS) !== 0) {
 					// Single unit files only need to be decompressed, but
              	   // Compression only happens when at least one byte is gained.
-					if (blockEntry.real_size > blockEntry.compressed_size || forceDecompress) {
+					if (blockEntry.real_size > blockEntry.compressed_size) {
 						fileData = this.#decompress(fileData);
 					}
 				}
@@ -214,7 +217,7 @@ export class MPQArchive {
 				for (let i = 0; i < sectorOffsets.length - (crc ? 2 : 1); i++) {
 					let sector = fileData.subarray(sectorOffsets[i], sectorOffsets[i + 1]);
 					const expectedSize = Math.min(sectorSize, sectorBytesLeft);
-					if((blockEntry.flags & MPQ_FILE_COMPRESS) !== 0 && (sector.length < expectedSize || forceDecompress)) {
+					if((blockEntry.flags & MPQ_FILE_COMPRESS) !== 0 && (sector.length < expectedSize)) {
 						sector = this.#decompress(sector);
 					}
 					result.push(sector);
@@ -233,7 +236,7 @@ export class MPQArchive {
 
 	}
 
-
+	//TODO: add support for extracting the entire archive
 	extract() {}
 
 	prepareEncryptionTable() {
@@ -305,8 +308,19 @@ export class MPQArchive {
 			user_data_content: this.file.subarray(16, 16 + this.file.readUInt32LE(12))
 		}
 	}
-
+	//compressed sectors have a 1 byte header indicating the compression type, followed by the compressed data.
+	//mpyq has an option to force decompression but i cant find any documentation that shows that uncompressed data can have a compression type header 
+	//so i presume this would result in false flags in non sc2replays (because all sc2 replays have compression)
 	#decompress(data) {
+		const compressionType = data[0];
+		const compressedData = data.subarray(1);
 
+		if (compressionType === 0x02) {
+			//zlib compression
+			return zlib.inflateSync(compressedData);
+		} else if (compressionType === 0x10) {
+			//bzip2 compression
+			return Buffer.from(compressjs.Bzip2.decompressFile(compressedData));
+		}
 	}
 }

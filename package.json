@@ -12,5 +12,8 @@
   "description": "",
   "devDependencies": {
     "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "compressjs": "^1.0.3"
   }
 }
