@@ -154,8 +154,18 @@ export class MPQArchive {
 
 	}
 
-	getHashTableEntry(filename) {}
-	
+	getHashTableEntry(filename) {
+		let hash_a = this.#hash(filename, HashType.HASH_A);
+		let hash_b = this.#hash(filename, HashType.HASH_B);
+		for (let entry of this.hashTable) {
+			if (entry.hash_a === hash_a && entry.hash_b === hash_b) {
+				return entry;
+			}
+		}
+		throw new Error(`File not found in MPQ: ${filename}`);
+		
+	}
+
 	readFile(filename) {}
 
 
