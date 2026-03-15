@@ -166,7 +166,72 @@ export class MPQArchive {
 		
 	}
 
-	readFile(filename) {}
+	readFile(filename, forceDecompress = false) {
+		let hashEntry = this.getHashTableEntry(filename);
+		let blockEntry = this.blockTable[hashEntry.block_table_index];
+
+
+		if ((blockEntry.flags & MPQ_FILE_EXISTS) !== 0) {
+			//read the file
+			if ((blockEntry.flags & MPQ_FILE_DELETE_MARKER) !== 0) {
+				throw new Error(`File Deleted: ${filename}`);
+			}
+			if ((blockEntry.flags & MPQ_FILE_ENCRYPTED) !== 0) {
+				throw new Error(`File is encrypted and cannot be read: ${filename}`);
+			}
+			// read the block
+			if(blockEntry.compressed_size === 0){ { return Buffer.alloc(0); } }
+			let actualOffset = blockEntry.offset + this.headerOffset;
+			let fileData = this.file.subarray(actualOffset, actualOffset + blockEntry.compressed_size);
+
+			if((blockEntry.flags & MPQ_FILE_SINGLE_UNIT) !== 0){
+				if ((blockEntry.flags & MPQ_FILE_COMPRESS) !== 0) {
+					// Single unit files only need to be decompressed, but
+             	   // Compression only happens when at least one byte is gained.
+					if (blockEntry.real_size > blockEntry.compressed_size || forceDecompress) {
+						fileData = this.#decompress(fileData);
+					}
+				}
+			}else{
+				//multi unit files are divided into sectors, each of which may be compressed.
+				//first sector tells us the offsets of each sector.
+				
+				let sectorSize = 512 << this.header.sector_size_shift;
+				let sectors = Math.floor(blockEntry.real_size / sectorSize) + 1;
+				const sectorOffsets = [];
+				//If the CRC flag is set then sector 2 is the CRC checksums. We ignore this.
+				let crc = false;
+				if ((blockEntry.flags & MPQ_FILE_SECTOR_CRC) !== 0) {
+					crc = true;
+				}
+				//start of the block shows where the sectors are offset to.
+				for(let i = 0; i < sectors + 1; i++) {
+					sectorOffsets.push(fileData.readUInt32LE(i * 4));
+				}
+
+				let sectorBytesLeft = blockEntry.real_size;
+				let result = [];
+				for (let i = 0; i < sectorOffsets.length - (crc ? 2 : 1); i++) {
+					let sector = fileData.subarray(sectorOffsets[i], sectorOffsets[i + 1]);
+					const expectedSize = Math.min(sectorSize, sectorBytesLeft);
+					if((blockEntry.flags & MPQ_FILE_COMPRESS) !== 0 && (sector.length < expectedSize || forceDecompress)) {
+						sector = this.#decompress(sector);
+					}
+					result.push(sector);
+					sectorBytesLeft -= sector.length;
+				}
+				fileData = Buffer.concat(result);
+			}
+
+			return fileData;
+		}else{
+			throw new Error(`File is flagged as not existing, data is probably corrupted: ${filename}`);
+		}
+
+
+		
+
+	}
 
 
 	extract() {}
@@ -239,5 +304,9 @@ export class MPQArchive {
 			user_data_header_size: this.file.readUInt32LE(12),
 			user_data_content: this.file.subarray(16, 16 + this.file.readUInt32LE(12))
 		}
+	}
+
+	#decompress(data) {
+
 	}
 }
