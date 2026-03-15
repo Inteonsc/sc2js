@@ -95,7 +95,8 @@ export class MPQArchive {
 		this.file = readFileSync(filename);
 		this.encryptionTable = this.prepareEncryptionTable();
 		this.header = this.readHeader();
-
+		this.hashTable = this.readHashTable();
+		this.blockTable = this.readBlockTable();
 
 
 	}
@@ -114,17 +115,49 @@ export class MPQArchive {
 		}
 	}
 
-	readTable(table_type) {
-		if (table_type === "hash") {
-		} else if (table_type === "block") {
-		} else {
-			throw new Error("Invalid table type");
+	readHashTable() {
+		let tableOffset = this.header.hash_table_offset + this.headerOffset;
+		let tableEntries = this.header.hash_table_entries;
+		let key = this.#hash("(hash table)", HashType.TABLE);
+		let encryptedData = this.file.subarray(tableOffset, tableOffset + tableEntries * 16);
+		let decryptedData = this.#decrypt(encryptedData, key);
+		let hashTable = [];
+		for(let i = 0; i < tableEntries; i++) {
+			hashTable.push({
+				hash_a: decryptedData.readUInt32LE(i * 16),
+				hash_b: decryptedData.readUInt32LE(i * 16 + 4),
+				locale: decryptedData.readUInt16LE(i * 16 + 8),
+				platform: decryptedData.readUInt16LE(i * 16 + 10), 
+				block_table_index: decryptedData.readUInt16LE(i * 16 + 12)
+			})
 		}
+		return hashTable;
+
 	}
 
-	readFile(filename) {}
+	readBlockTable() {
+		let tableOffset = this.header.block_table_offset + this.headerOffset;
+		let tableEntries = this.header.block_table_entries;
+		let key = this.#hash("(block table)", HashType.TABLE);
+		let encryptedData = this.file.subarray(tableOffset, tableOffset + tableEntries * 16);
+		let decryptedData = this.#decrypt(encryptedData, key);
+		let blockTable = [];
+		for(let i = 0; i < tableEntries; i++) {
+			blockTable.push({
+				offset: decryptedData.readUInt32LE(i * 16),
+				compressed_size: decryptedData.readUInt32LE(i * 16 + 4),
+				real_size: decryptedData.readUInt32LE(i * 16 + 8),
+				flags: decryptedData.readUInt32LE(i * 16 + 12)
+			})
+		}
+		return blockTable;
+
+	}
 
 	getHashTableEntry(filename) {}
+	
+	readFile(filename) {}
+
 
 	extract() {}
 
@@ -156,8 +189,24 @@ export class MPQArchive {
 		}
 		return seed1;
 	}
+	//decrypts data using the stream cipher with the given key
+	//Uses >>> 0 to convert to unsigned 32 bit integers and means we dont need the 0xffffffff mask in the algorithm
+	#decrypt(data, key) {
+		let seed1 = key;
+		let seed2 = SEED_2;
+		let decrypted = Buffer.alloc(data.length);
+		
+		for(let i = 0; i < data.length / 4; i += 1) {
+			seed2 = (seed2 + this.encryptionTable[0x400 + (seed1 & 0xff)]) >>> 0;
+			let value = data.readUInt32LE(i * 4);
+			value = (value ^ (seed1 + seed2)) >>> 0;
 
-	#decrypt(data, key) {}
+			seed1 = (((~seed1 << 0x15) + 0x11111111) | (seed1 >>> 0x0B)) >>> 0;
+			seed2 = value + seed2 + (seed2 << 5) + 3 >>> 0;
+			decrypted.writeUInt32LE(value, i * 4);
+		}
+		return decrypted;
+	}
 
 	#readMPQHeader() {
 		return {
