@@ -7,17 +7,11 @@ export class BitPackedBuffer {
 		this.bigEndian = Endian === "big";
 	}
 
-	finished() {
-		return this.bytesRead >= this.data.length && this.nextBitsLeft === 0;
-	}
+	finished() { return this.bytesRead >= this.data.length && this.nextBitsLeft === 0; }
 
-	usedBits() {
-		return this.bytesRead * 8 - this.nextBitsLeft;
-	}
+	usedBits() { return this.bytesRead * 8 - this.nextBitsLeft; }
 
-	byteAlign() {
-		this.nextBitsLeft = 0;
-	}
+	byteAlign() { this.nextBitsLeft = 0; }
 
 	readAlignedBytes(numBytes) {
 		this.byteAlign();
@@ -30,12 +24,11 @@ export class BitPackedBuffer {
 		}
 		return result;
 	}
-	//TODO add support for 64 bit reads if needed. only supports 32 bit integers at the moment
 
-    //Will return either a number or a bigint depending on if its above 32 bits or not.
+	//Will return either a number or a bigint depending on if its above 32 bits or not.
 	readBits(numBits) {
 		if (numBits > 32) {
-            return this.#read64Bits(numBits);
+			return this.#read64Bits(numBits);
 		}
 		let result = 0;
 		let bitsRead = 0;
@@ -61,14 +54,14 @@ export class BitPackedBuffer {
 		}
 		return result;
 	}
-    #read64Bits(numBits) {
-        if (numBits > 64) {
-            throw new Error("Cannot read more than 64 bits at a time");
-        }
-        let result = 0n;
-        let bitsRead = 0n;
-        let totalBits = BigInt(numBits);
-        while (bitsRead < totalBits) {
+	#read64Bits(numBits) {
+		if (numBits > 64) {
+			throw new Error("Cannot read more than 64 bits at a time");
+		}
+		let result = 0n;
+		let bitsRead = 0n;
+		let totalBits = BigInt(numBits);
+		while (bitsRead < totalBits) {
 			if (this.nextBitsLeft === 0) {
 				if (this.finished()) {
 					throw new Error("Attempted to read past end of buffer");
@@ -77,7 +70,9 @@ export class BitPackedBuffer {
 				this.bytesRead++;
 				this.nextBitsLeft = 8;
 			}
-			const bitsToRead = BigInt(Math.min(Number(totalBits - bitsRead), this.nextBitsLeft));
+			const bitsToRead = BigInt(
+				Math.min(Number(totalBits - bitsRead), this.nextBitsLeft),
+			);
 			const copy = BigInt(this.nextByte) & ((1n << bitsToRead) - 1n);
 			if (this.bigEndian) {
 				result |= copy << (totalBits - bitsRead - bitsToRead);
@@ -86,11 +81,10 @@ export class BitPackedBuffer {
 			}
 			this.nextByte >>= Number(bitsToRead);
 			this.nextBitsLeft -= Number(bitsToRead);
-			bitsRead += bitsToRead; 
+			bitsRead += bitsToRead;
 		}
-		return result; 
-
-    }
+		return result;
+	}
 
 	readUnalignedBytes(numBytes) {
 		const result = Buffer.allocUnsafe(numBytes);
@@ -100,7 +94,303 @@ export class BitPackedBuffer {
 		return result;
 	}
 }
+//In the original s2protocol there is alot of python tuples which we represent with arrays instead.
+export class BitPackedDecoder {
+	constructor(bitPackedBuffer, typeInfos) {
+		this.buffer = bitPackedBuffer;
+		this.typeInfos = typeInfos;
+	}
 
-export class BitPackedDecoder {}
+	instance(typeid) {
+		if (typeid >= this.typeInfos.length) {
+			throw new Error(
+				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`,
+			);
+		}
+		const typeinfo = this.typeInfos[typeid];
+		return this[typeinfo[0]](...typeinfo[1]);
+	}
 
-export class VersionedDecoder {}
+	byte_align() { this.buffer.byteAlign(); }
+	done() { return this.buffer.finished(); }
+	used_bits() { return this.buffer.usedBits(); }
+
+	_array(bounds, typeid) {
+		const length = this._int(bounds);
+		let result = [];
+		for (let i = 0; i < length; i++) {
+			result.push(this.instance(typeid));
+		}
+		return result;
+	}
+
+	_bitarray(bounds) {
+		const length = this._int(bounds);
+		return [length, this.buffer.readBits(length)];
+	}
+
+	_blob(bounds) {
+		const length = this._int(bounds);
+		const result = this.buffer.readAlignedBytes(length);
+		return result;
+	}
+
+	_bool() {
+		return this._int([0, 1]) !== 0;
+	}
+
+	_choice(bounds, fields) {
+		const tag = this._int(bounds);
+		if (!(tag in fields)) {
+			throw new Error(`Tag ${tag} not found in fields ${fields}`);
+		}
+		const field = fields[tag];
+		return { [field[0]]: this.instance(field[1]) };
+	}
+
+	_fourcc() {
+		return this.buffer.readUnalignedBytes(4);
+	}
+
+	_int(bounds) {
+		return bounds[0] + this.buffer.readBits(bounds[1]);
+	}
+
+	_null() {
+		return null;
+	}
+
+	_optional(typeid) {
+		const exists = this._bool();
+		return exists ? this.instance(typeid) : null;
+	}
+
+	_real32() {
+		const bytes = this.buffer.readUnalignedBytes(4);
+		return bytes.readFloatBE(0);
+	}
+
+	_real64() {
+		const bytes = this.buffer.readUnalignedBytes(8);
+		return bytes.readDoubleBE(0);
+	}
+	_struct(fields) {
+		let result = {};
+		for (const field of fields) {
+			if (field[0] === "__parent") {
+				const parent = this.instance(field[1]);
+				if (
+					typeof parent === "object" &&
+					!Array.isArray(parent) &&
+					parent !== null
+				) {
+					Object.assign(result, parent);
+				} else if (fields.length === 1) {
+					return parent;
+				} else {
+					result[field[0]] = parent;
+				}
+			} else {
+				result[field[0]] = this.instance(field[1]);
+			}
+		}
+		return result;
+	}
+}
+
+export class VersionedDecoder {
+	constructor(bitPackedBuffer, typeInfos) {
+		this.buffer = bitPackedBuffer;
+		this.typeInfos = typeInfos;
+	}
+
+	instance(typeid) {
+		if (typeid >= this.typeInfos.length) {
+			throw new Error(
+				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`,
+			);
+		}
+		const typeinfo = this.typeInfos[typeid];
+		return this[typeinfo[0]](...typeinfo[1]);
+	}
+
+	byte_align() { this.buffer.byteAlign(); }
+	done() { return this.buffer.finished(); }
+	used_bits() { return this.buffer.usedBits(); }
+
+	_expectSkip(expected) {
+		if (this.buffer.readBits(8) != expected) {
+			throw new Error("Corrupted Data");
+		}
+	}
+
+	_vint() {
+		let b = this.buffer.readBits(8);
+		const negative = b & 1;
+		let result = (b >> 1) & 0x3f;
+		let bits = 6;
+		while ((b & 0x80) != 0) {
+			b = this.buffer.readBits(8);
+			result |= (b & 0x7f) << bits;
+			bits += 7;
+		}
+		return negative ? -result : result;
+	}
+
+	_array(bounds, typeid) {
+		this._expectSkip(0);
+		const length = this._vint();
+		let result = [];
+		for (let i = 0; i < length; i++) {
+			result.push(this.instance(typeid));
+		}
+		return result;
+	}
+
+	_bitarray(bounds) {
+		this._expectSkip(1);
+		const length = this._vint();
+		return [
+			length,
+			this.buffer.readAlignedBytes(Math.floor((length + 7) / 8)),
+		];
+	}
+
+	_blob(bounds) {
+		this._expectSkip(2);
+		const length = this._vint();
+		return this.buffer.readAlignedBytes(length);
+	}
+
+	_bool() {
+		this._expectSkip(6);
+		return this.buffer.readBits(8) != 0;
+	}
+
+	_choice(bounds, fields) {
+		this._expectSkip(3);
+		const tag = this._vint();
+		if (!(tag in fields)) {
+			this._skipInstance();
+			return {};
+		}
+		const field = fields[tag];
+		return { [field[0]]: this.instance(field[1]) };
+	}
+
+	_fourcc() {
+		this._expectSkip(7);
+		return this.buffer.readAlignedBytes(4);
+	}
+
+	_int(bounds) {
+		this._expectSkip(9);
+		return this._vint();
+	}
+
+	_null() {
+		return null;
+	}
+
+	_optional(typeid) {
+		this._expectSkip(4);
+		const exists = this.buffer.readBits(8) != 0;
+		return exists ? this.instance(typeid) : null;
+	}
+
+	_real32() {
+		this._expectSkip(7);
+		const bytes = this.buffer.readUnalignedBytes(4);
+		return bytes.readFloatBE(0);
+	}
+
+	_real64() {
+		this._expectSkip(8);
+		const bytes = this.buffer.readUnalignedBytes(8);
+		return bytes.readDoubleBE(0);
+	}
+
+	_struct(fields) {
+		this._expectSkip(5);
+		let result = {};
+		const length = this._vint();
+		for (let i = 0; i < length; i++) {
+			const tag = this._vint();
+			const field = fields.find((f) => f[2] === tag);
+			if (field) {
+				if (field[0] === "__parent") {
+					const parent = this.instance(field[1]);
+					if (
+						typeof parent === "object" &&
+						!Array.isArray(parent) &&
+						parent !== null
+					) {
+						Object.assign(result, parent);
+					} else if (fields.length === 1) {
+						return parent;
+					} else {
+						result[field[0]] = parent;
+					}
+				} else {
+					result[field[0]] = this.instance(field[1]);
+				}
+			} else {
+				this._skipInstance();
+			}
+		}
+		return result;
+	}
+
+	_skipInstance() {
+		const skip = this.buffer.readBits(8);
+		switch (skip) {
+			case 0: { //array
+				const length = this._vint();
+				for (let i = 0; i < length; i++) {
+					this._skipInstance();
+				}
+				break;
+			}
+			case 1: { //bitblob
+				const length = this._vint();
+				this.buffer.readAlignedBytes(Math.floor((length + 7) / 8));
+				break;
+			}
+			case 2: { // blob
+				const length = this._vint();
+				this.buffer.readAlignedBytes(length);
+				break;
+			}
+			case 3: { // choice
+				this._vint();
+				this._skipInstance();
+				break;
+			}
+			case 4: { // optional
+				const exists = this.buffer.readBits(8) !== 0;
+				if (exists) this._skipInstance();
+				break;
+			}
+			case 5: { // struct
+				const length = this._vint();
+				for (let i = 0; i < length; i++) {
+					this._vint();
+					this._skipInstance();
+				}
+				break;
+			}
+			case 6: // u8
+				this.buffer.readAlignedBytes(1);
+				break;
+			case 7: // u32
+				this.buffer.readAlignedBytes(4);
+				break;
+			case 8: // u64
+				this.buffer.readAlignedBytes(8);
+				break;
+			case 9: // vint
+				this._vint();
+				break;
+		}
+	}
+}
