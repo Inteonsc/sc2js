@@ -1,4 +1,4 @@
-
+function varuInt32Value(){}
 
 function DecodeEventStream(){}
 
