@@ -28,7 +28,7 @@ export class BitPackedBuffer {
 	//Will return either a number or a bigint depending on if its above 32 bits or not.
 	readBits(numBits) {
 		if (numBits > 32) {
-			return this.#read64Bits(numBits);
+			return this.#readBigBits(numBits);
 		}
 		let result = 0;
 		let bitsRead = 0;
@@ -54,10 +54,8 @@ export class BitPackedBuffer {
 		}
 		return result;
 	}
-	#read64Bits(numBits) {
-		if (numBits > 64) {
-			throw new Error("Cannot read more than 64 bits at a time");
-		}
+	#readBigBits(numBits) {
+		
 		let result = 0n;
 		let bitsRead = 0n;
 		let totalBits = BigInt(numBits);
@@ -97,7 +95,7 @@ export class BitPackedBuffer {
 //In the original s2protocol there is alot of python tuples which we represent with arrays instead.
 export class BitPackedDecoder {
 	constructor(bitPackedBuffer, typeInfos) {
-		this.buffer = bitPackedBuffer;
+		this.buffer = checkBuffer(bitPackedBuffer);
 		this.typeInfos = typeInfos;
 	}
 
@@ -111,9 +109,9 @@ export class BitPackedDecoder {
 		return this[typeinfo[0]](...typeinfo[1]);
 	}
 
-	byte_align() { this.buffer.byteAlign(); }
-	done() { return this.buffer.finished(); }
-	used_bits() { return this.buffer.usedBits(); }
+	byteAlign() { this.buffer.byteAlign(); }
+	finished() { return this.buffer.finished(); }
+	usedBits() { return this.buffer.usedBits(); }
 
 	_array(bounds, typeid) {
 		const length = this._int(bounds);
@@ -152,8 +150,13 @@ export class BitPackedDecoder {
 		return this.buffer.readUnalignedBytes(4);
 	}
 
-	_int(bounds) {
-		return bounds[0] + this.buffer.readBits(bounds[1]);
+	_int(bounds) {  console.log("bounds: ", bounds);
+        const value = this.buffer.readBits(bounds[1]);
+      
+        if (typeof value === "bigint"){
+            return BigInt(bounds[0]) + value;
+        }
+		return bounds[0] + value;
 	}
 
 	_null() {
@@ -200,7 +203,7 @@ export class BitPackedDecoder {
 
 export class VersionedDecoder {
 	constructor(bitPackedBuffer, typeInfos) {
-		this.buffer = bitPackedBuffer;
+		this.buffer = checkBuffer(bitPackedBuffer);
 		this.typeInfos = typeInfos;
 	}
 
@@ -214,9 +217,9 @@ export class VersionedDecoder {
 		return this[typeinfo[0]](...typeinfo[1]);
 	}
 
-	byte_align() { this.buffer.byteAlign(); }
-	done() { return this.buffer.finished(); }
-	used_bits() { return this.buffer.usedBits(); }
+	byteAlign() { this.buffer.byteAlign(); }
+	finished() { return this.buffer.finished(); }
+	usedBits() { return this.buffer.usedBits(); }
 
 	_expectSkip(expected) {
 		if (this.buffer.readBits(8) != expected) {
@@ -393,4 +396,9 @@ export class VersionedDecoder {
 				break;
 		}
 	}
+}
+
+// checks if something is a bitpacked buffer and converts it if not
+function checkBuffer(contents){
+    return contents instanceof BitPackedBuffer ? contents : new BitPackedBuffer(contents);
 }

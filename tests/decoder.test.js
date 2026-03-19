@@ -397,22 +397,22 @@ describe('BitPackedDecoder', () => {
         test('done returns false when buffer has data', () => {
             const typeInfos = [['_int', [[0, 8]]]];
             const decoder = new BitPackedDecoder(makeBuf([0xFF]), typeInfos);
-            expect(decoder.done()).toBe(false);
+            expect(decoder.finished()).toBe(false);
         });
 
         test('done returns true after all data read', () => {
             const typeInfos = [['_int', [[0, 8]]]];
             const decoder = new BitPackedDecoder(makeBuf([0xFF]), typeInfos);
             decoder.instance(0);
-            expect(decoder.done()).toBe(true);
+            expect(decoder.finished()).toBe(true);
         });
 
         test('usedBits increments after reads', () => {
             const typeInfos = [['_int', [[0, 8]]]];
             const decoder = new BitPackedDecoder(makeBuf([0xFF]), typeInfos);
-            expect(decoder.used_bits()).toBe(0);
+            expect(decoder.usedBits()).toBe(0);
             decoder.instance(0);
-            expect(decoder.used_bits()).toBe(8);
+            expect(decoder.usedBits()).toBe(8);
         });
     });
 
@@ -593,13 +593,13 @@ describe('VersionedDecoder', () => {
     describe('done and usedBits', () => {
         test('done returns false when buffer has data', () => {
             const decoder = new VersionedDecoder(makeBuf([0x00]), []);
-            expect(decoder.done()).toBe(false);
+            expect(decoder.finished()).toBe(false);
         });
 
         test('done returns true when buffer exhausted', () => {
             const decoder = new VersionedDecoder(makeBuf([0x00]), []);
             decoder._vint();
-            expect(decoder.done()).toBe(true);
+            expect(decoder.finished()).toBe(true);
         });
     });
 
