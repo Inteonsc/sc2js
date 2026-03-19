@@ -7,7 +7,7 @@ import {
 from '../reader/protocolDecoder.js';
 import { 
     getPlayers, getDate, getGameSpeed, getGameVersion,
-    getMapName, getPlayerRaces, getRealDuration, getWinners} 
+    getMapName, getPlayersMetaData, getRealDuration, getWinner} 
 from './ReplayUtils.js';
 
 export class SC2Replay {
@@ -92,17 +92,18 @@ export class SC2Replay {
     getBasicInfo() {
         if(this.#cache.basicInfo){ return this.#cache.basicInfo;}
         const details = this.getDetails();
+        const metadata = this.getMetadata();
         const header = this.getHeader();
         const attributes = this.getAttributeEvents();
         this.#cache.basicInfo = {
-            map: getMapName(details),
+            map: getMapName(metadata),
             date: getDate(details),
-            version: getGameVersion(details),
+            version: getGameVersion(metadata),
             players: getPlayers(details),
-            winner: getWinners(details),
-            getGameSpeed: getGameSpeed(attributes),
+            winner: getWinner(metadata),
+            gameSpeed: getGameSpeed(attributes),
             duration: getRealDuration(header.m_elapsedGameLoops, getGameSpeed(attributes)),
-            races: getPlayerRaces(attributes)
+            playerMetaData: getPlayersMetaData(attributes)
         };
         return this.#cache.basicInfo;
     }

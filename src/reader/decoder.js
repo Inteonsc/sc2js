@@ -150,7 +150,7 @@ export class BitPackedDecoder {
 		return this.buffer.readUnalignedBytes(4);
 	}
 
-	_int(bounds) {  console.log("bounds: ", bounds);
+	_int(bounds) {  
         const value = this.buffer.readBits(bounds[1]);
       
         if (typeof value === "bigint"){
@@ -234,7 +234,11 @@ export class VersionedDecoder {
 		let bits = 6;
 		while ((b & 0x80) != 0) {
 			b = this.buffer.readBits(8);
-			result |= (b & 0x7f) << bits;
+            if(bits >= 25){
+                result = BigInt(result) | (BigInt(b & 0x7f) << BigInt(bits))
+            }else{
+			    result |= (b & 0x7f) << bits;
+            }
 			bits += 7;
 		}
 		return negative ? -result : result;

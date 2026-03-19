@@ -2,11 +2,15 @@ import { expect, test, describe } from 'vitest'
 import { SC2Replay } from '../src/api/SC2Replay'
 
 
-const replay = new SC2Replay("tests/fixtures/testreplay.SC2Replay")
+
 
 describe("Replay loads Basic Info", () => {
+    const replay = new SC2Replay("tests/fixtures/testreplay.SC2Replay")
+    const info = replay.getBasicInfo();
     test("Map name is correct", () =>{
-        const info = replay.getBasicInfo();
         expect(info.map).toBe("10000 Feet LE")
+    });
+    test("Player's are correct", () => {
+        expect(info.players[0].m_name.toString("utf-8")).toBe("Lilipadd");
     });
 });

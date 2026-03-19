@@ -140,7 +140,6 @@ describe("Protocol Decoder", () => {
 			const bytes = mpq.UserDataHeader.user_data_content;
 			const header = decodeReplayHeader(bytes, protocol);
 			expect(header.m_version.m_baseBuild).toBeDefined();
-            console.log(JSON.stringify(header,null,2));
 		});
 	});
 
@@ -181,7 +180,6 @@ describe("Protocol Decoder", () => {
 			const attributes = decodeReplayAttributesEvents(bytes);
 			expect(attributes).toBeDefined();
 			expect(attributes.scopes).toBeDefined();
-            console.log(Object.keys(attributes.scopes));
             expect(attributes.scopes["16"][AttributeCodes.GAME_SPEED][0].value.toString("utf-8")).toBe("Fasr");
             
 		});
