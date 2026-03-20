@@ -89,7 +89,7 @@ export class SC2Replay {
             this.#protocol
         );
     }
-
+    
     getBasicInfo() {
         if(this.#cache.basicInfo){ return this.#cache.basicInfo;}
         const details = this.getDetails();
@@ -100,11 +100,10 @@ export class SC2Replay {
             map: getMapName(metadata),
             date: getDate(details),
             version: getGameVersion(metadata),
-            players: getPlayers(details),
+            players: getPlayers(details, metadata),
             winner: getWinner(metadata),
             gameSpeed: getGameSpeed(attributes),
             duration: getRealDuration(header.m_elapsedGameLoops, getGameSpeed(attributes)),
-            playerMetaData: getPlayersMetaData(attributes)
         };
         return this.#cache.basicInfo;
     }

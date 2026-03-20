@@ -11,8 +11,30 @@ describe("Replay loads Basic Info", () => {
         expect(info.map).toBe("10000 Feet LE")
     });
     test("Player's are correct", () => {
-        expect(info.players[0].m_name.toString("utf-8")).toBe("Lilipadd");
-        expect(info.players[0].m_race.toString("utf-8")).toBe("Zerg");
+        expect(info.players[0].name).toBe("Lilipadd");
+        expect(info.players[0].details.m_race.toString("utf-8")).toBe("Zerg");
+        expect(info.players[0].clan).toBe("VFish");
         
     });
+    test("Duration is Correct", () => {
+        expect(info.duration).toBe(261);
+    });
+    test("Version is correct", () => {
+        expect(info.version).toContain("5.0.15");
+    })
+    test("Winner is correct", () => {
+        expect(info.winner).toBe(0);
+    })
+    test("", () => {
+        
+    })
+    test("", () => {
+        
+    })
+    test("", () => {
+        
+    })
+    test("", () => {
+        
+    })
 });
