@@ -10,6 +10,7 @@ import {
     getMapName, getPlayersMetaData, getRealDuration, getWinner} 
 from './ReplayUtils.js';
 
+//TODO add string conversion for fields (cant just convert the entire file like we did with metadata)
 export class SC2Replay {
     #mpq;
     #protocol;

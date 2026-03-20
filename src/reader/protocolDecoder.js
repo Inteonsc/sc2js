@@ -99,7 +99,7 @@ export function decodeReplayAttributesEvents(contents){
             value.attrid = attrid;
             const scope = buffer.readBits(8);
             const raw = buffer.readAlignedBytes(4);
-            value.value = raw.reverse().filter(b => b !== 0);
+            value.value = raw.reverse().filter(b => b !== 0).toString("utf-8");
             if(!(scope in attributes.scopes)) {attributes.scopes[scope] = {}}
             if(!(attrid in attributes.scopes[scope])){ attributes.scopes[scope][attrid] = [];}
             attributes.scopes[scope][attrid].push(value)

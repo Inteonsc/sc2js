@@ -3635,1105 +3635,532 @@
           {
             "namespace": 999,
             "attrid": 500,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                72,
-                117,
-                109,
-                110
-              ]
-            }
+            "value": "Humn"
           }
         ],
         "2002": [
           {
             "namespace": 999,
             "attrid": 2002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2003": [
           {
             "namespace": 999,
             "attrid": 2003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2004": [
           {
             "namespace": 999,
             "attrid": 2004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2005": [
           {
             "namespace": 999,
             "attrid": 2005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2006": [
           {
             "namespace": 999,
             "attrid": 2006,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2007": [
           {
             "namespace": 999,
             "attrid": 2007,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2008": [
           {
             "namespace": 999,
             "attrid": 2008,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2011": [
           {
             "namespace": 999,
             "attrid": 2011,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2018": [
           {
             "namespace": 999,
             "attrid": 2018,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "2024": [
           {
             "namespace": 999,
             "attrid": 2024,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                49
-              ]
-            }
+            "value": "T1"
           }
         ],
         "3001": [
           {
             "namespace": 999,
             "attrid": 3001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                90,
-                101,
-                114,
-                103
-              ]
-            }
+            "value": "Zerg"
           }
         ],
         "3002": [
           {
             "namespace": 999,
             "attrid": 3002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                116,
-                99,
-                48,
-                52
-              ]
-            }
+            "value": "tc04"
           }
         ],
         "3003": [
           {
             "namespace": 999,
             "attrid": 3003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                49,
-                48,
-                48
-              ]
-            }
+            "value": " 100"
           }
         ],
         "3004": [
           {
             "namespace": 999,
             "attrid": 3004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                77,
-                101,
-                100,
-                105
-              ]
-            }
+            "value": "Medi"
           }
         ],
         "3007": [
           {
             "namespace": 999,
             "attrid": 3007,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                80,
-                97,
-                114,
-                116
-              ]
-            }
+            "value": "Part"
           }
         ],
         "3008": [
           {
             "namespace": 999,
             "attrid": 3008,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                79,
-                98,
-                115
-              ]
-            }
+            "value": "Obs"
           }
         ],
         "3011": [
           {
             "namespace": 999,
             "attrid": 3011,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3012": [
           {
             "namespace": 999,
             "attrid": 3012,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                50,
-                50
-              ]
-            }
+            "value": "  22"
           }
         ],
         "3013": [
           {
             "namespace": 999,
             "attrid": 3013,
-            "value": {
-              "type": "Buffer",
-              "data": []
-            }
+            "value": ""
           }
         ],
         "3014": [
           {
             "namespace": 999,
             "attrid": 3014,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                49
-              ]
-            }
+            "value": "   1"
           }
         ],
         "3016": [
           {
             "namespace": 999,
             "attrid": 3016,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3017": [
           {
             "namespace": 999,
             "attrid": 3017,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3019": [
           {
             "namespace": 999,
             "attrid": 3019,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "3020": [
           {
             "namespace": 999,
             "attrid": 3020,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "3102": [
           {
             "namespace": 999,
             "attrid": 3102,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3103": [
           {
             "namespace": 999,
             "attrid": 3103,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3104": [
           {
             "namespace": 999,
             "attrid": 3104,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3105": [
           {
             "namespace": 999,
             "attrid": 3105,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3106": [
           {
             "namespace": 999,
             "attrid": 3106,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3107": [
           {
             "namespace": 999,
             "attrid": 3107,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3108": [
           {
             "namespace": 999,
             "attrid": 3108,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3109": [
           {
             "namespace": 999,
             "attrid": 3109,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3110": [
           {
             "namespace": 999,
             "attrid": 3110,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3111": [
           {
             "namespace": 999,
             "attrid": 3111,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3134": [
           {
             "namespace": 999,
             "attrid": 3134,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3135": [
           {
             "namespace": 999,
             "attrid": 3135,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3136": [
           {
             "namespace": 999,
             "attrid": 3136,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3137": [
           {
             "namespace": 999,
             "attrid": 3137,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3138": [
           {
             "namespace": 999,
             "attrid": 3138,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3139": [
           {
             "namespace": 999,
             "attrid": 3139,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3140": [
           {
             "namespace": 999,
             "attrid": 3140,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3141": [
           {
             "namespace": 999,
             "attrid": 3141,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3142": [
           {
             "namespace": 999,
             "attrid": 3142,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3143": [
           {
             "namespace": 999,
             "attrid": 3143,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3166": [
           {
             "namespace": 999,
             "attrid": 3166,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3167": [
           {
             "namespace": 999,
             "attrid": 3167,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3168": [
           {
             "namespace": 999,
             "attrid": 3168,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3169": [
           {
             "namespace": 999,
             "attrid": 3169,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3170": [
           {
             "namespace": 999,
             "attrid": 3170,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3171": [
           {
             "namespace": 999,
             "attrid": 3171,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3172": [
           {
             "namespace": 999,
             "attrid": 3172,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3173": [
           {
             "namespace": 999,
             "attrid": 3173,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3174": [
           {
             "namespace": 999,
             "attrid": 3174,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3175": [
           {
             "namespace": 999,
             "attrid": 3175,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3198": [
           {
             "namespace": 999,
             "attrid": 3198,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3199": [
           {
             "namespace": 999,
             "attrid": 3199,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3200": [
           {
             "namespace": 999,
             "attrid": 3200,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3201": [
           {
             "namespace": 999,
             "attrid": 3201,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3202": [
           {
             "namespace": 999,
             "attrid": 3202,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3203": [
           {
             "namespace": 999,
             "attrid": 3203,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3204": [
           {
             "namespace": 999,
             "attrid": 3204,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3205": [
           {
             "namespace": 999,
             "attrid": 3205,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3206": [
           {
             "namespace": 999,
             "attrid": 3206,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3207": [
           {
             "namespace": 999,
             "attrid": 3207,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "4001": [
           {
             "namespace": 999,
             "attrid": 4001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                121,
-                101,
-                115
-              ]
-            }
+            "value": "yes"
           }
         ],
         "4005": [
           {
             "namespace": 999,
             "attrid": 4005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "5000": [
           {
             "namespace": 999,
             "attrid": 5000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5001": [
           {
             "namespace": 999,
             "attrid": 5001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5002": [
           {
             "namespace": 999,
             "attrid": 5002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5003": [
           {
             "namespace": 999,
             "attrid": 5003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5004": [
           {
             "namespace": 999,
             "attrid": 5004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5005": [
           {
             "namespace": 999,
             "attrid": 5005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5100": [
           {
             "namespace": 999,
             "attrid": 5100,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5200": [
           {
             "namespace": 999,
             "attrid": 5200,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "5300": [
           {
             "namespace": 999,
             "attrid": 5300,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ]
       },
@@ -4742,1104 +4169,532 @@
           {
             "namespace": 999,
             "attrid": 500,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                67,
-                111,
-                109,
-                112
-              ]
-            }
+            "value": "Comp"
           }
         ],
         "2002": [
           {
             "namespace": 999,
             "attrid": 2002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2003": [
           {
             "namespace": 999,
             "attrid": 2003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2004": [
           {
             "namespace": 999,
             "attrid": 2004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2005": [
           {
             "namespace": 999,
             "attrid": 2005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2006": [
           {
             "namespace": 999,
             "attrid": 2006,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2007": [
           {
             "namespace": 999,
             "attrid": 2007,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2008": [
           {
             "namespace": 999,
             "attrid": 2008,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2011": [
           {
             "namespace": 999,
             "attrid": 2011,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2018": [
           {
             "namespace": 999,
             "attrid": 2018,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "2024": [
           {
             "namespace": 999,
             "attrid": 2024,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                84,
-                50
-              ]
-            }
+            "value": "T2"
           }
         ],
         "3001": [
           {
             "namespace": 999,
             "attrid": 3001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                82,
-                65,
-                78,
-                68
-              ]
-            }
+            "value": "RAND"
           }
         ],
         "3002": [
           {
             "namespace": 999,
             "attrid": 3002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                116,
-                99,
-                48,
-                50
-              ]
-            }
+            "value": "tc02"
           }
         ],
         "3003": [
           {
             "namespace": 999,
             "attrid": 3003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                49,
-                48,
-                48
-              ]
-            }
+            "value": " 100"
           }
         ],
         "3004": [
           {
             "namespace": 999,
             "attrid": 3004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                86,
-                121,
-                69,
-                121
-              ]
-            }
+            "value": "VyEy"
           }
         ],
         "3007": [
           {
             "namespace": 999,
             "attrid": 3007,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                80,
-                97,
-                114,
-                116
-              ]
-            }
+            "value": "Part"
           }
         ],
         "3008": [
           {
             "namespace": 999,
             "attrid": 3008,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                79,
-                98,
-                115
-              ]
-            }
+            "value": "Obs"
           }
         ],
         "3011": [
           {
             "namespace": 999,
             "attrid": 3011,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3012": [
           {
             "namespace": 999,
             "attrid": 3012,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                50,
-                50
-              ]
-            }
+            "value": "  22"
           }
         ],
         "3013": [
           {
             "namespace": 999,
             "attrid": 3013,
-            "value": {
-              "type": "Buffer",
-              "data": []
-            }
+            "value": ""
           }
         ],
         "3014": [
           {
             "namespace": 999,
             "attrid": 3014,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                49
-              ]
-            }
+            "value": "   1"
           }
         ],
         "3016": [
           {
             "namespace": 999,
             "attrid": 3016,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3017": [
           {
             "namespace": 999,
             "attrid": 3017,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "3019": [
           {
             "namespace": 999,
             "attrid": 3019,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "3020": [
           {
             "namespace": 999,
             "attrid": 3020,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "3102": [
           {
             "namespace": 999,
             "attrid": 3102,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3103": [
           {
             "namespace": 999,
             "attrid": 3103,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3104": [
           {
             "namespace": 999,
             "attrid": 3104,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3105": [
           {
             "namespace": 999,
             "attrid": 3105,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3106": [
           {
             "namespace": 999,
             "attrid": 3106,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3107": [
           {
             "namespace": 999,
             "attrid": 3107,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3108": [
           {
             "namespace": 999,
             "attrid": 3108,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3109": [
           {
             "namespace": 999,
             "attrid": 3109,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3110": [
           {
             "namespace": 999,
             "attrid": 3110,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3111": [
           {
             "namespace": 999,
             "attrid": 3111,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3134": [
           {
             "namespace": 999,
             "attrid": 3134,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3135": [
           {
             "namespace": 999,
             "attrid": 3135,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3136": [
           {
             "namespace": 999,
             "attrid": 3136,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3137": [
           {
             "namespace": 999,
             "attrid": 3137,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3138": [
           {
             "namespace": 999,
             "attrid": 3138,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3139": [
           {
             "namespace": 999,
             "attrid": 3139,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3140": [
           {
             "namespace": 999,
             "attrid": 3140,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3141": [
           {
             "namespace": 999,
             "attrid": 3141,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3142": [
           {
             "namespace": 999,
             "attrid": 3142,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3143": [
           {
             "namespace": 999,
             "attrid": 3143,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3166": [
           {
             "namespace": 999,
             "attrid": 3166,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3167": [
           {
             "namespace": 999,
             "attrid": 3167,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3168": [
           {
             "namespace": 999,
             "attrid": 3168,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3169": [
           {
             "namespace": 999,
             "attrid": 3169,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3170": [
           {
             "namespace": 999,
             "attrid": 3170,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3171": [
           {
             "namespace": 999,
             "attrid": 3171,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3172": [
           {
             "namespace": 999,
             "attrid": 3172,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3173": [
           {
             "namespace": 999,
             "attrid": 3173,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3174": [
           {
             "namespace": 999,
             "attrid": 3174,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3175": [
           {
             "namespace": 999,
             "attrid": 3175,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3198": [
           {
             "namespace": 999,
             "attrid": 3198,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3199": [
           {
             "namespace": 999,
             "attrid": 3199,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3200": [
           {
             "namespace": 999,
             "attrid": 3200,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3201": [
           {
             "namespace": 999,
             "attrid": 3201,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3202": [
           {
             "namespace": 999,
             "attrid": 3202,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3203": [
           {
             "namespace": 999,
             "attrid": 3203,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3204": [
           {
             "namespace": 999,
             "attrid": 3204,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3205": [
           {
             "namespace": 999,
             "attrid": 3205,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3206": [
           {
             "namespace": 999,
             "attrid": 3206,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "3207": [
           {
             "namespace": 999,
             "attrid": 3207,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                65,
-                66,
-                48,
-                48
-              ]
-            }
+            "value": "AB00"
           }
         ],
         "4001": [
           {
             "namespace": 999,
             "attrid": 4001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "4005": [
           {
             "namespace": 999,
             "attrid": 4005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "5000": [
           {
             "namespace": 999,
             "attrid": 5000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5001": [
           {
             "namespace": 999,
             "attrid": 5001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5002": [
           {
             "namespace": 999,
             "attrid": 5002,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5003": [
           {
             "namespace": 999,
             "attrid": 5003,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5004": [
           {
             "namespace": 999,
             "attrid": 5004,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5005": [
           {
             "namespace": 999,
             "attrid": 5005,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5100": [
           {
             "namespace": 999,
             "attrid": 5100,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ],
         "5200": [
           {
             "namespace": 999,
             "attrid": 5200,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                110,
-                111
-              ]
-            }
+            "value": "no"
           }
         ],
         "5300": [
           {
             "namespace": 999,
             "attrid": 5300,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                32,
-                32,
-                32,
-                48
-              ]
-            }
+            "value": "   0"
           }
         ]
       },
@@ -5848,140 +4703,70 @@
           {
             "namespace": 999,
             "attrid": 1000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                68,
-                102,
-                108,
-                116
-              ]
-            }
+            "value": "Dflt"
           }
         ],
         "1001": [
           {
             "namespace": 999,
             "attrid": 1001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                121,
-                101,
-                115
-              ]
-            }
+            "value": "yes"
           }
         ],
         "2000": [
           {
             "namespace": 999,
             "attrid": 2000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                116,
-                50
-              ]
-            }
+            "value": "t2"
           }
         ],
         "2001": [
           {
             "namespace": 999,
             "attrid": 2001,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                49,
-                118,
-                49
-              ]
-            }
+            "value": "1v1"
           }
         ],
         "3000": [
           {
             "namespace": 999,
             "attrid": 3000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                70,
-                97,
-                115,
-                114
-              ]
-            }
+            "value": "Fasr"
           }
         ],
         "3006": [
           {
             "namespace": 999,
             "attrid": 3006,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                49,
-                48
-              ]
-            }
+            "value": "10"
           }
         ],
         "3009": [
           {
             "namespace": 999,
             "attrid": 3009,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                80,
-                114,
-                105,
-                118
-              ]
-            }
+            "value": "Priv"
           }
         ],
         "3010": [
           {
             "namespace": 999,
             "attrid": 3010,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                121,
-                101,
-                115
-              ]
-            }
+            "value": "yes"
           }
         ],
         "3015": [
           {
             "namespace": 999,
             "attrid": 3015,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                48
-              ]
-            }
+            "value": "0"
           }
         ],
         "4000": [
           {
             "namespace": 999,
             "attrid": 4000,
-            "value": {
-              "type": "Buffer",
-              "data": [
-                78,
-                111,
-                77,
-                72
-              ]
-            }
+            "value": "NoMH"
           }
         ]
       }

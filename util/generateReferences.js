@@ -16,4 +16,19 @@ const reference = {
 
 writeFileSync('reference.json', JSON.stringify(reference, (key, value) => 
     typeof value === 'bigint' ? value.toString() : value, 2));
-console.log('Written to reference.json');
+
+const teamreplay = new SC2Replay('tests/fixtures/teamgametestreplay.SC2Replay');
+
+const teamreference = {
+    header: teamreplay.getHeader(),
+    details: teamreplay.getDetails(),
+    initData: teamreplay.getInitData(),
+    metadata: teamreplay.getMetadata(),
+    attributes: teamreplay.getAttributeEvents(),
+    firstTrackerEvent: [...teamreplay.getTrackerEvents()][0],
+    firstGameEvent: [...teamreplay.getGameEvents()][0],
+    firstMessageEvent: [...teamreplay.getMessageEvents()][0],
+};
+
+writeFileSync('teamreference.json', JSON.stringify(teamreference, (key, value) => 
+    typeof value === 'bigint' ? value.toString() : value, 2));

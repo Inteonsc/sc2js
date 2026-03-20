@@ -12,5 +12,7 @@ describe("Replay loads Basic Info", () => {
     });
     test("Player's are correct", () => {
         expect(info.players[0].m_name.toString("utf-8")).toBe("Lilipadd");
+        expect(info.players[0].m_race.toString("utf-8")).toBe("Zerg");
+        
     });
 });
