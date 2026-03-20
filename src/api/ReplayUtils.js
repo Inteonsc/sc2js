@@ -1,4 +1,4 @@
-import AttributeCodes from "../reader/attributes";
+import AttributeCodes from "../reader/attributes.js";
 //functions to get basic info from a replay
 
 export function getPlayers(details, metadata){
@@ -61,4 +61,20 @@ export function getRealDuration(elapsedGameLoops, gameSpeed){
     return Math.floor(normalSeconds /GAME_SPEED_FACTOR[gameSpeed]);
 }
 
+export function getGamemode(attributes){
+    const gamemodeInfo = {
+        gamemode: attributes.scopes[16][AttributeCodes.GAME_MODE][0].value,
+        teamFormat: attributes.scopes[16][AttributeCodes.PARTIES_PREMADE][0].value
+    }
+    return gamemodeInfo;
 
+}
+
+export function isAIGame(players){
+    for(const player of players){
+        if(player.details.m_control === 3){
+            return true;
+        }
+    }
+    return false;
+}

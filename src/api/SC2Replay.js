@@ -6,8 +6,8 @@ import {
     decodeReplayAttributesEvents} 
 from '../reader/protocolDecoder.js';
 import { 
-    getPlayers, getDate, getGameSpeed, getGameVersion,
-    getMapName, getPlayersMetaData, getRealDuration, getWinner} 
+    getPlayers, getDate, getGameSpeed, getGameVersion, isAIGame,
+    getMapName, getGamemode, getRealDuration, getWinner} 
 from './ReplayUtils.js';
 
 //TODO add string conversion for fields (cant just convert the entire file like we did with metadata)
@@ -96,14 +96,17 @@ export class SC2Replay {
         const metadata = this.getMetadata();
         const header = this.getHeader();
         const attributes = this.getAttributeEvents();
+        const players = getPlayers(details, metadata);
         this.#cache.basicInfo = {
             map: getMapName(metadata),
             date: getDate(details),
             version: getGameVersion(metadata),
-            players: getPlayers(details, metadata),
+            players: players,
             winner: getWinner(metadata),
             gameSpeed: getGameSpeed(attributes),
             duration: getRealDuration(header.m_elapsedGameLoops, getGameSpeed(attributes)),
+            isAIGame: isAIGame(players),
+            gamemode: getGamemode(attributes)
         };
         return this.#cache.basicInfo;
     }
