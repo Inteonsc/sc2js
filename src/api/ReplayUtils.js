@@ -40,7 +40,6 @@ export function getGameVersion(metadata){
 export function getDate(details){
     const windowsTime = BigInt(details.m_timeUTC);
     const unixMs = Number(windowsTime /10000n -11644473600000n);
-    console.log(new Date(unixMs));
     return new Date(unixMs);
 
 }
