@@ -14,8 +14,8 @@
   "license": "ISC",
   "description": "A Javascript library for parsing StarCraft II replay files",
   "files": [
-    "./index.js",
-    "./src/"
+    "index.js",
+    "src/"
   ],
   "devDependencies": {
     "vitest": "^4.0.18"
