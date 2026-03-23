@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["starcraft", "sc2", "replay", "parser"],
+  "author": "Lili",
   "license": "ISC",
-  "description": "",
+  "description": "A Javascript library for parsing StarCraft II replay files",
+  "files": [
+    "index.js",
+    "src/"
+  ],
   "devDependencies": {
     "vitest": "^4.0.18"
   },
