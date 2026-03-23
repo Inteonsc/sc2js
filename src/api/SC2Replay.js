@@ -17,6 +17,7 @@ export class SC2Replay {
     #cache = {};
 
     constructor(path) {
+        this.path = path;
         this.#mpq = new MPQArchive(path);
         const header = decodeReplayHeader(
             this.#mpq.UserDataHeader.user_data_content,
@@ -53,10 +54,15 @@ export class SC2Replay {
     }
 
     getMetadata() {
-        if (this.#cache.metadata) return this.#cache.metadata;
+        if (this.#cache.metadata !== undefined) return this.#cache.metadata;
+        try{
         this.#cache.metadata = JSON.parse(
             this.#mpq.readFile('replay.gamemetadata.json').toString('utf-8')
         );
+        }catch (e){
+            console.error("Failed to read metadata from:", this.path);
+            this.#cache.metadata = null;
+        }
         return this.#cache.metadata;
     }
 
