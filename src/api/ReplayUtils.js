@@ -1,6 +1,6 @@
 import AttributeCodes from "../reader/attributes.js";
 //functions to get basic info from a replay
-
+//TODO add checks to all read functions to make sure the file exists or returns null
 export function getPlayers(details, metadata){
     const players = [];
     for(let i = 0; i < details.m_playerList.length; i++){
@@ -43,8 +43,9 @@ export function getDate(details){
     return new Date(unixMs);
 
 }
+//TODO some weird replays dont have a scope 16 (i think custom games/mods etc so need to fix that)
 export function getGameSpeed(attributes){
-    return attributes.scopes["16"][AttributeCodes.GAME_SPEED][0].value;
+    return attributes?.scopes?.["16"]?.[AttributeCodes.GAME_SPEED]?.[0]?.value ?? "Norm";
 }
 
 const GAME_SPEED_FACTOR = {
@@ -62,8 +63,8 @@ export function getRealDuration(elapsedGameLoops, gameSpeed){
 
 export function getGamemode(attributes){
     const gamemodeInfo = {
-        gamemode: attributes.scopes[16][AttributeCodes.GAME_MODE][0].value,
-        teamFormat: attributes.scopes[16][AttributeCodes.PARTIES_PREMADE][0].value
+        gamemode: attributes?.scopes?.[16]?.[AttributeCodes.GAME_MODE]?.[0]?.value ?? "Unknown",
+        teamFormat: attributes?.scopes?.[16]?.[AttributeCodes.PARTIES_PREMADE]?.[0]?.value ?? "Unknown"
     }
     return gamemodeInfo;
 

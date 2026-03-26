@@ -100,6 +100,9 @@ export class MPQArchive {
 		this.header = this.readHeader();
 		this.hashTable = this.readHashTable();
 		this.blockTable = this.readBlockTable();
+        if(listFiles ?? false){
+            this.files = this.readFile("(listfile)").toString("utf-8");
+        }
 
 
 	}
@@ -231,13 +234,21 @@ export class MPQArchive {
 			throw new Error(`File is flagged as not existing, data is probably corrupted: ${filename}`);
 		}
 
-
-		
-
 	}
 
 	//TODO: add support for extracting the entire archive
-	extract() {}
+	extract() {
+        if(!(this.files)) throw new Error("cannot extract without Listfile");
+        if(this.files === "") throw new Error("Listfile Empty")
+        const files = this.files.split("\r\n");
+        const result = {};
+        for(const file of files){
+            if(file !== ""){
+            result[file] = this.readFile(file);
+            }
+        }
+        return result;
+    }
 
 	prepareEncryptionTable() {
 		let encryptionTable = {};

@@ -1,119 +1,146 @@
-import { MPQArchive } from '../reader/mpq.js';
-import { loadProtocol } from '../reader/protocolLoader.js';
-import { 
-    decodeReplayHeader, decodeReplayDetails, decodeReplayTrackerEvents,
-    decodeReplayGameEvents, decodeReplayMessageEvents, decodeReplayInitData,
-    decodeReplayAttributesEvents} 
-from '../reader/protocolDecoder.js';
-import { 
-    getPlayers, getDate, getGameSpeed, getGameVersion, isAIGame,
-    getMapName, getGamemode, getRealDuration, getWinner} 
-from './ReplayUtils.js';
+import { MPQArchive } from "../reader/mpq.js";
+import { loadProtocol } from "../reader/protocolLoader.js";
+import {
+	decodeReplayHeader,
+	decodeReplayDetails,
+	decodeReplayTrackerEvents,
+	decodeReplayGameEvents,
+	decodeReplayMessageEvents,
+	decodeReplayInitData,
+	decodeReplayAttributesEvents,
+} from "../reader/protocolDecoder.js";
+import {
+	getPlayers,
+	getDate,
+	getGameSpeed,
+	getGameVersion,
+	isAIGame,
+	getMapName,
+	getGamemode,
+	getRealDuration,
+	getWinner,
+} from "./ReplayUtils.js";
 
 //TODO add string conversion for fields (cant just convert the entire file like we did with metadata)
+//TODO deal with errors and just return NO DATA for fields that dont exist etc
 export class SC2Replay {
-    #mpq;
-    #protocol;
-    #cache = {};
+	#mpq;
+	#protocol;
+	#cache = {};
 
-    constructor(path) {
-        this.path = path;
-        this.#mpq = new MPQArchive(path);
-        const header = decodeReplayHeader(
-            this.#mpq.UserDataHeader.user_data_content,
-            loadProtocol(95299) // base protocol for header
-        );
-        this.#protocol = loadProtocol(header.m_version.m_baseBuild);
-    }
+	constructor(path) {
+		this.path = path;
+		this.#mpq = new MPQArchive(path, true);
+		const header = decodeReplayHeader(
+			this.#mpq.UserDataHeader.user_data_content,
+			loadProtocol(95299), // base protocol for header
+		);
+		this.#protocol = loadProtocol(header.m_version.m_baseBuild);
+	}
 
-    getHeader() {
-        if (this.#cache.header) return this.#cache.header;
-        this.#cache.header = decodeReplayHeader(
-            this.#mpq.UserDataHeader.user_data_content,
-            this.#protocol
-        );
-        return this.#cache.header;
+    getListFiles(){
+        return this.#mpq.files;
     }
 
-    getDetails() {
-        if (this.#cache.details) return this.#cache.details;
-        this.#cache.details = decodeReplayDetails(
-            this.#mpq.readFile('replay.details'),
-            this.#protocol
-        );
-        return this.#cache.details;
-    }
+	getHeader() {
+		if (this.#cache.header) return this.#cache.header;
+		this.#cache.header = decodeReplayHeader(
+			this.#mpq.UserDataHeader.user_data_content,
+			this.#protocol,
+		);
+		return this.#cache.header;
+	}
 
-    getInitData() {
-        if (this.#cache.initData) return this.#cache.initData;
-        this.#cache.initData = decodeReplayInitData(
-            this.#mpq.readFile('replay.initData'),
-            this.#protocol
-        );
-        return this.#cache.initData;
-    }
+	getDetails() {
+		if (this.#cache.details) return this.#cache.details;
+		this.#cache.details = decodeReplayDetails(
+			this.#mpq.readFile("replay.details"),
+			this.#protocol,
+		);
+		return this.#cache.details;
+	}
 
-    getMetadata() {
-        if (this.#cache.metadata !== undefined) return this.#cache.metadata;
-        try{
-        this.#cache.metadata = JSON.parse(
-            this.#mpq.readFile('replay.gamemetadata.json').toString('utf-8')
-        );
-        }catch (e){
-            console.error("Failed to read metadata from:", this.path);
-            this.#cache.metadata = null;
-        }
-        return this.#cache.metadata;
-    }
+	getInitData() {
+		if (this.#cache.initData) return this.#cache.initData;
+		this.#cache.initData = decodeReplayInitData(
+			this.#mpq.readFile("replay.initData"),
+			this.#protocol,
+		);
+		return this.#cache.initData;
+	}
 
-    getAttributeEvents() {
-        if (this.#cache.attributes) return this.#cache.attributes;
-        this.#cache.attributes = decodeReplayAttributesEvents(
-            this.#mpq.readFile('replay.attributes.events')
-        );
-        return this.#cache.attributes;
-    }
+	getMetadata() {
+		if (this.#cache.metadata !== undefined) return this.#cache.metadata;
+		try {
+			this.#cache.metadata = JSON.parse(
+				this.#mpq
+					.readFile("replay.gamemetadata.json")
+					.toString("utf-8"),
+			);
+		} catch (e) {
+			console.error("Failed to read metadata from:", this.path);
+			this.#cache.metadata = null;
+		}
+		return this.#cache.metadata;
+	}
 
-    // generators — not cached since they stream
-    getTrackerEvents() {
-        return decodeReplayTrackerEvents(
-            this.#mpq.readFile('replay.tracker.events'),
-            this.#protocol
-        );
-    }
+	getAttributeEvents() {
+		if (this.#cache.attributes) return this.#cache.attributes;
+		this.#cache.attributes = decodeReplayAttributesEvents(
+			this.#mpq.readFile("replay.attributes.events"),
+		);
+		return this.#cache.attributes;
+	}
 
-    getGameEvents() {
-        return decodeReplayGameEvents(
-            this.#mpq.readFile('replay.game.events'),
-            this.#protocol
-        );
-    }
+	// generators — not cached since they stream
+	getTrackerEvents() {
+		try {
+			return decodeReplayTrackerEvents(
+				this.#mpq.readFile("replay.tracker.events"),
+				this.#protocol,
+			);
+		} catch (e) {
+			return "Error: " + e.message;
+		}
+	}
 
-    getMessageEvents() {
-        return decodeReplayMessageEvents(
-            this.#mpq.readFile('replay.message.events'),
-            this.#protocol
-        );
-    }
-    
-    getBasicInfo() {
-        if(this.#cache.basicInfo){ return this.#cache.basicInfo;}
-        const details = this.getDetails();
-        const metadata = this.getMetadata();
-        const header = this.getHeader();
-        const attributes = this.getAttributeEvents();
-        const players = getPlayers(details, metadata);
-        this.#cache.basicInfo = {
-            map: getMapName(metadata),
-            date: getDate(details),
-            version: getGameVersion(metadata),
-            players: players,
-            winner: getWinner(metadata),
-            gameSpeed: getGameSpeed(attributes),
-            duration: getRealDuration(header.m_elapsedGameLoops, getGameSpeed(attributes)),
-            isAIGame: isAIGame(players),
-            gamemode: getGamemode(attributes)
-        };
-        return this.#cache.basicInfo;
-    }
+	getGameEvents() {
+		return decodeReplayGameEvents(
+			this.#mpq.readFile("replay.game.events"),
+			this.#protocol,
+		);
+	}
+
+	getMessageEvents() {
+		return decodeReplayMessageEvents(
+			this.#mpq.readFile("replay.message.events"),
+			this.#protocol,
+		);
+	}
+
+	getBasicInfo() {
+		if (this.#cache.basicInfo) {
+			return this.#cache.basicInfo;
+		}
+		const details = this.getDetails();
+		const metadata = this.getMetadata();
+		const header = this.getHeader();
+		const attributes = this.getAttributeEvents();
+		const players = getPlayers(details, metadata);
+		this.#cache.basicInfo = {
+			map: getMapName(metadata),
+			date: getDate(details),
+			version: getGameVersion(metadata),
+			players: players,
+			winner: getWinner(metadata),
+			gameSpeed: getGameSpeed(attributes),
+			duration: getRealDuration(
+				header.m_elapsedGameLoops,
+				getGameSpeed(attributes),
+			),
+			isAIGame: isAIGame(players),
+			gamemode: getGamemode(attributes),
+		};
+		return this.#cache.basicInfo;
+	}
 }
