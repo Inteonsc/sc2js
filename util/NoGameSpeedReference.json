@@ -1,2236 +1,1596 @@
 {
-  "listfiles": "replay.attributes.events\r\nreplay.details\r\nreplay.details.backup\r\nreplay.game.events\r\nreplay.gamemetadata.json\r\nreplay.initData\r\nreplay.initData.backup\r\nreplay.load.info\r\nreplay.message.events\r\nreplay.resumable.events\r\nreplay.smartcam.events\r\nreplay.sync.events\r\nreplay.sync.history\r\nreplay.tracker.events\r\n",
-  "header": {
-    "m_signature": {
-      "type": "Buffer",
-      "data": [
-        83,
-        116,
-        97,
-        114,
-        67,
-        114,
-        97,
-        102,
-        116,
-        32,
-        73,
-        73,
-        32,
-        114,
-        101,
-        112,
-        108,
-        97,
-        121,
-        27,
-        49,
-        49
-      ]
-    },
-    "m_version": {
-      "m_flags": 1,
-      "m_major": 5,
-      "m_minor": 0,
-      "m_revision": 11,
-      "m_build": 90136,
-      "m_baseBuild": 90136
-    },
-    "m_type": 2,
-    "m_elapsedGameLoops": 3850,
-    "m_useScaledTime": false,
-    "m_ngdpRootKey": {
-      "m_data": {
-        "type": "Buffer",
-        "data": [
-          32,
-          127,
-          157,
-          212,
-          93,
-          2,
-          201,
-          230,
-          209,
-          159,
-          134,
-          142,
-          2,
-          57,
-          231,
-          45
-        ]
-      }
-    },
-    "m_dataBuildNum": 90136,
-    "m_replayCompatibilityHash": {
-      "m_data": {
-        "type": "Buffer",
-        "data": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      }
-    },
-    "m_ngdpRootKeyIsDevData": false
-  },
-  "details": {
-    "m_playerList": [
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            76,
-            111,
-            99,
-            97,
-            108,
-            32,
-            80,
-            108,
-            97,
-            121,
-            101,
-            114
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            84,
-            101,
-            114,
-            114,
-            97,
-            110
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 255,
-          "m_g": 255,
-          "m_b": 255
-        },
-        "m_control": 2,
-        "m_teamId": 0,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            75,
-            101,
-            114,
-            114,
-            105,
-            103,
-            97,
-            110,
-            39,
-            115,
-            32,
-            83,
-            119,
-            97,
-            114,
-            109
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            90,
-            101,
-            114,
-            103
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 84,
-          "m_g": 0,
-          "m_b": 129
-        },
-        "m_control": 3,
-        "m_teamId": 1,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            85,
-            69,
-            68,
-            32,
-            70,
-            108,
-            101,
-            101,
-            116
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            84,
-            101,
-            114,
-            114,
-            97,
-            110
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 255,
-          "m_g": 255,
-          "m_b": 255
-        },
-        "m_control": 3,
-        "m_teamId": 2,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            75,
-            101,
-            114,
-            114,
-            105,
-            103,
-            97,
-            110,
-            32,
-            66,
-            111,
-            100,
-            121,
-            103,
-            117,
-            97,
-            114,
-            100
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            90,
-            101,
-            114,
-            103
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 180,
-          "m_g": 20,
-          "m_b": 30
-        },
-        "m_control": 3,
-        "m_teamId": 3,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            83,
-            97,
-            114,
-            97,
-            104,
-            32,
-            75,
-            101,
-            114,
-            114,
-            105,
-            103,
-            97,
-            110
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            90,
-            101,
-            114,
-            103
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 180,
-          "m_g": 20,
-          "m_b": 30
-        },
-        "m_control": 3,
-        "m_teamId": 4,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            67,
-            97,
-            112,
-            116,
-            97,
-            105,
-            110
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            84,
-            101,
-            114,
-            114,
-            97,
-            110
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 35,
-          "m_g": 35,
-          "m_b": 35
-        },
-        "m_control": 3,
-        "m_teamId": 5,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 0,
-        "m_workingSetSlotId": null,
-        "m_hero": {
-          "type": "Buffer",
-          "data": []
-        }
-      }
-    ],
-    "m_title": {
-      "type": "Buffer",
-      "data": [
-        84,
-        104,
-        101,
-        32,
-        65,
-        108,
-        101,
-        120,
-        97,
-        110,
-        100,
-        101,
-        114
-      ]
-    },
-    "m_difficulty": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_thumbnail": {
-      "m_file": {
-        "type": "Buffer",
-        "data": [
-          70,
-          108,
-          97,
-          103,
-          115,
-          104,
-          105,
-          112,
-          75,
-          101,
-          114,
-          114,
-          105,
-          103,
-          97,
-          110,
-          76,
-          111,
-          97,
-          100,
-          46,
-          116,
-          103,
-          97
-        ]
-      }
-    },
-    "m_isBlizzardMap": false,
-    "m_timeUTC": "133275394757328569",
-    "m_timeLocalOffset": "36000000000",
-    "m_description": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_imageFilePath": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_mapFileName": {
-      "type": "Buffer",
-      "data": [
-        83,
-        99,
-        97,
-        116,
-        116,
-        101,
-        114,
-        101,
-        100,
-        47,
-        49,
-        45,
-        49,
-        95,
-        65,
-        108,
-        101,
-        120,
-        97,
-        110,
-        100,
-        101,
-        114,
-        46,
-        83,
-        67,
-        50,
-        77,
-        97,
-        112
-      ]
-    },
-    "m_cacheHandles": [],
-    "m_miniSave": false,
-    "m_gameSpeed": 2,
-    "m_defaultDifficulty": 3,
-    "m_modPaths": [
-      {
-        "type": "Buffer",
-        "data": [
-          77,
-          111,
-          100,
-          115,
-          47,
-          76,
-          105,
-          98,
-          101,
-          114,
-          116,
-          121,
-          46,
-          83,
-          67,
-          50,
-          77,
-          111,
-          100
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          67,
-          97,
-          109,
-          112,
-          97,
-          105,
-          103,
-          110,
-          115,
-          47,
-          76,
-          105,
-          98,
-          101,
-          114,
-          116,
-          121,
-          46,
-          83,
-          67,
-          50,
-          67,
-          97,
-          109,
-          112,
-          97,
-          105,
-          103,
-          110
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          77,
-          111,
-          100,
-          115,
-          47,
-          84,
-          114,
-          97,
-          110,
-          113,
-          117,
-          105,
-          108,
-          105,
-          116,
-          121,
-          46,
-          83,
-          67,
-          50,
-          77,
-          111,
-          100
-        ]
-      }
-    ],
-    "m_campaignIndex": 0,
-    "m_restartAsTransitionMap": true,
-    "m_disableRecoverGame": false
-  },
-  "initData": {
-    "m_syncLobbyState": {
-      "m_userInitialData": [
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              76,
-              111,
-              99,
-              97,
-              108,
-              32,
-              80,
-              108,
-              97,
-              121,
-              101,
-              114
-            ]
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 36910109,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": true,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 0,
-          "m_combinedRaceLevels": -1,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_testType": 0,
-          "m_observe": 0,
-          "m_hero": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_skin": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_mount": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_toonHandle": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_scaledRating": null
-        }
-      ],
-      "m_gameDescription": {
-        "m_randomValue": -1279955983,
-        "m_gameCacheName": {
-          "type": "Buffer",
-          "data": [
-            68,
-            102,
-            108,
-            116
-          ]
-        },
-        "m_gameOptions": {
-          "m_lockTeams": false,
-          "m_teamsTogether": false,
-          "m_advancedSharedControl": false,
-          "m_randomRaces": false,
-          "m_battleNet": false,
-          "m_amm": false,
-          "m_competitive": false,
-          "m_practice": false,
-          "m_cooperative": false,
-          "m_noVictoryOrDefeat": false,
-          "m_heroDuplicatesAllowed": true,
-          "m_fog": 0,
-          "m_observers": 0,
-          "m_userDifficulty": 0,
-          "m_clientDebugFlags": "0",
-          "m_buildCoachEnabled": true
-        },
-        "m_gameSpeed": 2,
-        "m_gameType": 0,
-        "m_maxUsers": 1,
-        "m_maxObservers": 0,
-        "m_maxPlayers": 6,
-        "m_maxTeams": 6,
-        "m_maxColors": 16,
-        "m_maxRaces": 3,
-        "m_maxControls": 1,
-        "m_mapSizeX": 0,
-        "m_mapSizeY": 0,
-        "m_mapFileSyncChecksum": -334135930,
-        "m_mapFileName": {
-          "type": "Buffer",
-          "data": [
-            83,
-            99,
-            97,
-            116,
-            116,
-            101,
-            114,
-            101,
-            100,
-            47,
-            49,
-            45,
-            49,
-            95,
-            65,
-            108,
-            101,
-            120,
-            97,
-            110,
-            100,
-            101,
-            114,
-            46,
-            83,
-            67,
-            50,
-            77,
-            97,
-            112
-          ]
-        },
-        "m_mapAuthorName": {
-          "type": "Buffer",
-          "data": []
-        },
-        "m_modFileSyncChecksum": -1355089525,
-        "m_slotDescriptions": [
-          {
-            "m_allowedColors": [
-              16,
-              256
-            ],
-            "m_allowedRaces": [
-              3,
-              1
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "57896044618658097711785492504343953926634992332820282019728792003956564819967"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103578531291942356813466769584874896290656132764975698794250240"
-            ]
-          },
-          {
-            "m_allowedColors": [
-              16,
-              4096
-            ],
-            "m_allowedRaces": [
-              3,
-              2
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "1809251394333065553493296640760748560207343510400633813116524750123642650624"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103585593031394666829325638227369421183640952235678466637299712"
-            ]
-          },
-          {
-            "m_allowedColors": [
-              16,
-              256
-            ],
-            "m_allowedRaces": [
-              3,
-              1
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "1809251394333065553493296640760748560207343510400633813116524750123642650624"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103613839989195685946051126468432625028396201026503973388943360"
-            ]
-          },
-          {
-            "m_allowedColors": [
-              16,
-              512
-            ],
-            "m_allowedRaces": [
-              3,
-              2
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "1809251394333065553493296640760748560207343510400633813116524750123642650624"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103726827820425521379316459846841582809355268210833380012457984"
-            ]
-          },
-          {
-            "m_allowedColors": [
-              16,
-              512
-            ],
-            "m_allowedRaces": [
-              3,
-              2
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "1809251394333065553493296640760748560207343510400633813116524750123642650624"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103578531291942356813466769584874896290656132764975698794250240"
-            ]
-          },
-          {
-            "m_allowedColors": [
-              16,
-              64
-            ],
-            "m_allowedRaces": [
-              3,
-              1
-            ],
-            "m_allowedDifficulty": [
-              32,
-              -33095680
-            ],
-            "m_allowedControls": [
-              255,
-              "1809251394333065553493296640760748560207343510400633813116524750123642650624"
-            ],
-            "m_allowedObserveTypes": [
-              3,
-              1
-            ],
-            "m_allowedAIBuilds": [
-              255,
-              "28269555624668103585593031394666829325638227369421183640952235678466637299712"
-            ]
-          }
-        ],
-        "m_defaultDifficulty": 3,
-        "m_defaultAIBuild": 0,
-        "m_cacheHandles": [],
-        "m_hasExtensionMod": false,
-        "m_hasNonBlizzardExtensionMod": false,
-        "m_isBlizzardMap": false,
-        "m_isPremadeFFA": false,
-        "m_isCoopMode": false,
-        "m_isRealtimeMode": false
-      },
-      "m_lobbyState": {
-        "m_phase": 0,
-        "m_maxUsers": 1,
-        "m_maxObservers": 0,
-        "m_slots": [
-          {
-            "m_control": 2,
-            "m_userId": 0,
-            "m_teamId": 0,
-            "m_colorPref": {
-              "m_color": 0
-            },
-            "m_racePref": {
-              "m_race": 0
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": 0,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          },
-          {
-            "m_control": 3,
-            "m_userId": null,
-            "m_teamId": 1,
-            "m_colorPref": {
-              "m_color": 4
-            },
-            "m_racePref": {
-              "m_race": 1
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": null,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          },
-          {
-            "m_control": 3,
-            "m_userId": null,
-            "m_teamId": 2,
-            "m_colorPref": {
-              "m_color": 0
-            },
-            "m_racePref": {
-              "m_race": 0
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": null,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          },
-          {
-            "m_control": 3,
-            "m_userId": null,
-            "m_teamId": 3,
-            "m_colorPref": {
-              "m_color": 1
-            },
-            "m_racePref": {
-              "m_race": 1
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": null,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          },
-          {
-            "m_control": 3,
-            "m_userId": null,
-            "m_teamId": 4,
-            "m_colorPref": {
-              "m_color": 1
-            },
-            "m_racePref": {
-              "m_race": 1
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": null,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          },
-          {
-            "m_control": 3,
-            "m_userId": null,
-            "m_teamId": 5,
-            "m_colorPref": {
-              "m_color": 14
-            },
-            "m_racePref": {
-              "m_race": 0
-            },
-            "m_difficulty": 3,
-            "m_aiBuild": 0,
-            "m_handicap": 100,
-            "m_observe": 0,
-            "m_logoIndex": 0,
-            "m_hero": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_skin": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_mount": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_artifacts": [],
-            "m_workingSetSlotId": null,
-            "m_rewards": [],
-            "m_toonHandle": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_licenses": [],
-            "m_tandemLeaderId": null,
-            "m_commander": {
-              "type": "Buffer",
-              "data": []
-            },
-            "m_commanderLevel": 0,
-            "m_hasSilencePenalty": false,
-            "m_tandemId": null,
-            "m_commanderMasteryLevel": 0,
-            "m_commanderMasteryTalents": [],
-            "m_trophyId": 0,
-            "m_rewardOverrides": [],
-            "m_brutalPlusDifficulty": 0,
-            "m_retryMutationIndexes": [],
-            "m_aCEnemyRace": 0,
-            "m_aCEnemyWaveType": 0,
-            "m_selectedCommanderPrestige": 0
-          }
-        ],
-        "m_randomSeed": -1171252978,
-        "m_hostUserId": 0,
-        "m_isSinglePlayer": true,
-        "m_pickedMapTag": 0,
-        "m_gameDuration": 0,
-        "m_defaultDifficulty": 3,
-        "m_defaultAIBuild": 0
-      }
-    }
-  },
-  "metadata": {
-    "Title": "The Alexander",
-    "MapName": "Scattered/1-1_Alexander.SC2Map",
-    "GameVersion": "5.0.11.90136",
-    "DataBuild": "90136",
-    "DataVersion": "207F9DD45D02C9E6D19F868E0239E72D",
-    "BaseBuild": "Base90136",
-    "Duration": 241,
-    "Players": [
-      {
-        "PlayerID": 1,
-        "APM": 76,
-        "Result": "Undecided",
-        "SelectedRace": "Terr",
-        "AssignedRace": "Terr"
-      },
-      {
-        "PlayerID": 2,
-        "APM": 0,
-        "Result": "Undecided",
-        "SelectedRace": "Zerg",
-        "AssignedRace": "Zerg"
-      },
-      {
-        "PlayerID": 3,
-        "APM": 0,
-        "Result": "Undecided",
-        "SelectedRace": "Terr",
-        "AssignedRace": "Terr"
-      },
-      {
-        "PlayerID": 4,
-        "APM": 0,
-        "Result": "Undecided",
-        "SelectedRace": "Zerg",
-        "AssignedRace": "Zerg"
-      },
-      {
-        "PlayerID": 5,
-        "APM": 0,
-        "Result": "Undecided",
-        "SelectedRace": "Zerg",
-        "AssignedRace": "Zerg"
-      },
-      {
-        "PlayerID": 6,
-        "APM": 0,
-        "Result": "Undecided",
-        "SelectedRace": "Terr",
-        "AssignedRace": "Terr"
-      }
-    ]
-  },
-  "attributes": {},
-  "firstTrackerEvent": {
-    "_event": "_error",
-    "_gameloop": 0,
-    "_error": "Corrupted Data"
-  },
-  "firstGameEvent": {
-    "m_syncInfo": {
-      "m_soundHash": [
-        2440161,
-        647686207,
-        1097899879,
-        1709561543,
-        -2001404035,
-        -101103124,
-        34975660,
-        1051398821,
-        -1374275266,
-        1636575940,
-        2096591071,
-        -97962802,
-        1696743476,
-        805102204,
-        1425313678,
-        -655188527,
-        610193556,
-        667204077,
-        155361826,
-        -341710625,
-        1508928727,
-        1272566587,
-        -884419413,
-        1744822412,
-        29762163,
-        1000573945,
-        -890650599,
-        879615576,
-        1955071389,
-        -388943657,
-        1561302360,
-        -121439896,
-        526824759,
-        657005092,
-        1024822592,
-        -1841722695,
-        1157976390,
-        66067640,
-        377202581,
-        -1815224928,
-        1682168586,
-        -42850877,
-        -584468546,
-        -1576254469,
-        -418056512,
-        254165062,
-        170213851,
-        -942955348,
-        -1742797427,
-        1646761961,
-        -99997213,
-        286846085,
-        -1879785182,
-        1159665767,
-        1920426428,
-        961075385,
-        365615462,
-        1479052838,
-        -93192667,
-        -981934791,
-        -959395501,
-        1604849242,
-        -795156344,
-        1425572526,
-        700713039,
-        -534069851,
-        -257352754,
-        -678567651,
-        -1386793811,
-        -1511418421,
-        522555016,
-        -832273154,
-        -713066001,
-        1505352076,
-        -611586272,
-        -1855934711,
-        -1864602862,
-        -1631902534,
-        2047167777,
-        -1162542243,
-        -668319975,
-        767252675,
-        472213006,
-        1530414146,
-        371513421,
-        -1514100697,
-        -2076531463,
-        -337819173,
-        -1187865735,
-        -1266807576,
-        1238995791,
-        -131571783,
-        615815052,
-        -1566965753,
-        1859147446,
-        988125766,
-        -782766870,
-        -768352074,
-        1410008154,
-        -1752626011,
-        -273622801,
-        109689345,
-        -2068198454,
-        -1594835795,
-        -992506332,
-        2073626334,
-        2015800703,
-        1409746033,
-        -1519606438,
-        324959380
-      ],
-      "m_length": [
-        4750,
-        4690,
-        1216,
-        1099,
-        1082,
-        4797,
-        4960,
-        3986,
-        4436,
-        4271,
-        4365,
-        4932,
-        4591,
-        4323,
-        5027,
-        2075,
-        1555,
-        1950,
-        1888,
-        2328,
-        2289,
-        2592,
-        2700,
-        2742,
-        2726,
-        4027,
-        4301,
-        3602,
-        4453,
-        3737,
-        3751,
-        4285,
-        4190,
-        3698,
-        4017,
-        3219,
-        2834,
-        2570,
-        2897,
-        2730,
-        2652,
-        2530,
-        3050,
-        2918,
-        2620,
-        4010,
-        3471,
-        3057,
-        3661,
-        3655,
-        3127,
-        2146,
-        2426,
-        2252,
-        2147,
-        9898,
-        9984,
-        3385,
-        4524,
-        6404,
-        7480,
-        263,
-        601,
-        210,
-        234,
-        800,
-        782,
-        694,
-        1067,
-        440,
-        367,
-        351,
-        4300,
-        2319,
-        2319,
-        913,
-        840,
-        951,
-        1085,
-        1086,
-        1155,
-        1322,
-        1362,
-        1430,
-        2386,
-        2273,
-        2998,
-        2649,
-        2302,
-        1966,
-        1721,
-        1583,
-        1764,
-        1586,
-        1492,
-        1780,
-        1367,
-        1317,
-        1364,
-        1606,
-        1870,
-        1551,
-        1651,
-        709,
-        836,
-        695,
-        1001,
-        1018,
-        1127,
-        561
-      ]
-    },
-    "_event": "NNet.Game.STriggerSoundLengthSyncEvent",
-    "_eventid": 56,
-    "_gameloop": 0,
-    "_userid": {
-      "m_userId": 0
-    },
-    "_bits": 7080
-  },
-  "firstMessageEvent": {
-    "m_progress": -4294967286,
-    "_event": "NNet.Game.SLoadingProgressMessage",
-    "_eventid": 2,
-    "_gameloop": 0,
-    "_userid": {
-      "m_userId": 0
-    },
-    "_bits": 56
-  }
+	"listfiles": "replay.attributes.events\r\nreplay.details\r\nreplay.details.backup\r\nreplay.game.events\r\nreplay.gamemetadata.json\r\nreplay.initData\r\nreplay.initData.backup\r\nreplay.load.info\r\nreplay.message.events\r\nreplay.resumable.events\r\nreplay.smartcam.events\r\nreplay.sync.events\r\nreplay.sync.history\r\nreplay.tracker.events\r\n",
+	"header": {
+		"m_signature": {
+			"type": "Buffer",
+			"data": [
+				83, 116, 97, 114, 67, 114, 97, 102, 116, 32, 73, 73, 32, 114, 101, 112, 108, 97,
+				121, 27, 49, 49
+			]
+		},
+		"m_version": {
+			"m_flags": 1,
+			"m_major": 5,
+			"m_minor": 0,
+			"m_revision": 11,
+			"m_build": 90136,
+			"m_baseBuild": 90136
+		},
+		"m_type": 2,
+		"m_elapsedGameLoops": 3850,
+		"m_useScaledTime": false,
+		"m_ngdpRootKey": {
+			"m_data": {
+				"type": "Buffer",
+				"data": [32, 127, 157, 212, 93, 2, 201, 230, 209, 159, 134, 142, 2, 57, 231, 45]
+			}
+		},
+		"m_dataBuildNum": 90136,
+		"m_replayCompatibilityHash": {
+			"m_data": {
+				"type": "Buffer",
+				"data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+			}
+		},
+		"m_ngdpRootKeyIsDevData": false
+	},
+	"details": {
+		"m_playerList": [
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [76, 111, 99, 97, 108, 32, 80, 108, 97, 121, 101, 114]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [84, 101, 114, 114, 97, 110]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 255,
+					"m_g": 255,
+					"m_b": 255
+				},
+				"m_control": 2,
+				"m_teamId": 0,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [
+						75, 101, 114, 114, 105, 103, 97, 110, 39, 115, 32, 83, 119, 97, 114, 109
+					]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [90, 101, 114, 103]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 84,
+					"m_g": 0,
+					"m_b": 129
+				},
+				"m_control": 3,
+				"m_teamId": 1,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [85, 69, 68, 32, 70, 108, 101, 101, 116]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [84, 101, 114, 114, 97, 110]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 255,
+					"m_g": 255,
+					"m_b": 255
+				},
+				"m_control": 3,
+				"m_teamId": 2,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [
+						75, 101, 114, 114, 105, 103, 97, 110, 32, 66, 111, 100, 121, 103, 117, 97,
+						114, 100
+					]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [90, 101, 114, 103]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 180,
+					"m_g": 20,
+					"m_b": 30
+				},
+				"m_control": 3,
+				"m_teamId": 3,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [83, 97, 114, 97, 104, 32, 75, 101, 114, 114, 105, 103, 97, 110]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [90, 101, 114, 103]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 180,
+					"m_g": 20,
+					"m_b": 30
+				},
+				"m_control": 3,
+				"m_teamId": 4,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [67, 97, 112, 116, 97, 105, 110]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [84, 101, 114, 114, 97, 110]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 35,
+					"m_g": 35,
+					"m_b": 35
+				},
+				"m_control": 3,
+				"m_teamId": 5,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 0,
+				"m_workingSetSlotId": null,
+				"m_hero": {
+					"type": "Buffer",
+					"data": []
+				}
+			}
+		],
+		"m_title": {
+			"type": "Buffer",
+			"data": [84, 104, 101, 32, 65, 108, 101, 120, 97, 110, 100, 101, 114]
+		},
+		"m_difficulty": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_thumbnail": {
+			"m_file": {
+				"type": "Buffer",
+				"data": [
+					70, 108, 97, 103, 115, 104, 105, 112, 75, 101, 114, 114, 105, 103, 97, 110, 76,
+					111, 97, 100, 46, 116, 103, 97
+				]
+			}
+		},
+		"m_isBlizzardMap": false,
+		"m_timeUTC": "133275394757328569",
+		"m_timeLocalOffset": "36000000000",
+		"m_description": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_imageFilePath": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_mapFileName": {
+			"type": "Buffer",
+			"data": [
+				83, 99, 97, 116, 116, 101, 114, 101, 100, 47, 49, 45, 49, 95, 65, 108, 101, 120, 97,
+				110, 100, 101, 114, 46, 83, 67, 50, 77, 97, 112
+			]
+		},
+		"m_cacheHandles": [],
+		"m_miniSave": false,
+		"m_gameSpeed": 2,
+		"m_defaultDifficulty": 3,
+		"m_modPaths": [
+			{
+				"type": "Buffer",
+				"data": [
+					77, 111, 100, 115, 47, 76, 105, 98, 101, 114, 116, 121, 46, 83, 67, 50, 77, 111,
+					100
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					67, 97, 109, 112, 97, 105, 103, 110, 115, 47, 76, 105, 98, 101, 114, 116, 121,
+					46, 83, 67, 50, 67, 97, 109, 112, 97, 105, 103, 110
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					77, 111, 100, 115, 47, 84, 114, 97, 110, 113, 117, 105, 108, 105, 116, 121, 46,
+					83, 67, 50, 77, 111, 100
+				]
+			}
+		],
+		"m_campaignIndex": 0,
+		"m_restartAsTransitionMap": true,
+		"m_disableRecoverGame": false
+	},
+	"initData": {
+		"m_syncLobbyState": {
+			"m_userInitialData": [
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [76, 111, 99, 97, 108, 32, 80, 108, 97, 121, 101, 114]
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 36910109,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": true,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 0,
+					"m_combinedRaceLevels": -1,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_testType": 0,
+					"m_observe": 0,
+					"m_hero": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_skin": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_mount": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_toonHandle": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_scaledRating": null
+				}
+			],
+			"m_gameDescription": {
+				"m_randomValue": -1279955983,
+				"m_gameCacheName": {
+					"type": "Buffer",
+					"data": [68, 102, 108, 116]
+				},
+				"m_gameOptions": {
+					"m_lockTeams": false,
+					"m_teamsTogether": false,
+					"m_advancedSharedControl": false,
+					"m_randomRaces": false,
+					"m_battleNet": false,
+					"m_amm": false,
+					"m_competitive": false,
+					"m_practice": false,
+					"m_cooperative": false,
+					"m_noVictoryOrDefeat": false,
+					"m_heroDuplicatesAllowed": true,
+					"m_fog": 0,
+					"m_observers": 0,
+					"m_userDifficulty": 0,
+					"m_clientDebugFlags": "0",
+					"m_buildCoachEnabled": true
+				},
+				"m_gameSpeed": 2,
+				"m_gameType": 0,
+				"m_maxUsers": 1,
+				"m_maxObservers": 0,
+				"m_maxPlayers": 6,
+				"m_maxTeams": 6,
+				"m_maxColors": 16,
+				"m_maxRaces": 3,
+				"m_maxControls": 1,
+				"m_mapSizeX": 0,
+				"m_mapSizeY": 0,
+				"m_mapFileSyncChecksum": -334135930,
+				"m_mapFileName": {
+					"type": "Buffer",
+					"data": [
+						83, 99, 97, 116, 116, 101, 114, 101, 100, 47, 49, 45, 49, 95, 65, 108, 101,
+						120, 97, 110, 100, 101, 114, 46, 83, 67, 50, 77, 97, 112
+					]
+				},
+				"m_mapAuthorName": {
+					"type": "Buffer",
+					"data": []
+				},
+				"m_modFileSyncChecksum": -1355089525,
+				"m_slotDescriptions": [
+					{
+						"m_allowedColors": [16, 256],
+						"m_allowedRaces": [3, 1],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"57896044618658097711785492504343953926634992332820282019728792003956564819967"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103578531291942356813466769584874896290656132764975698794250240"
+						]
+					},
+					{
+						"m_allowedColors": [16, 4096],
+						"m_allowedRaces": [3, 2],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"1809251394333065553493296640760748560207343510400633813116524750123642650624"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103585593031394666829325638227369421183640952235678466637299712"
+						]
+					},
+					{
+						"m_allowedColors": [16, 256],
+						"m_allowedRaces": [3, 1],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"1809251394333065553493296640760748560207343510400633813116524750123642650624"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103613839989195685946051126468432625028396201026503973388943360"
+						]
+					},
+					{
+						"m_allowedColors": [16, 512],
+						"m_allowedRaces": [3, 2],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"1809251394333065553493296640760748560207343510400633813116524750123642650624"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103726827820425521379316459846841582809355268210833380012457984"
+						]
+					},
+					{
+						"m_allowedColors": [16, 512],
+						"m_allowedRaces": [3, 2],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"1809251394333065553493296640760748560207343510400633813116524750123642650624"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103578531291942356813466769584874896290656132764975698794250240"
+						]
+					},
+					{
+						"m_allowedColors": [16, 64],
+						"m_allowedRaces": [3, 1],
+						"m_allowedDifficulty": [32, -33095680],
+						"m_allowedControls": [
+							255,
+							"1809251394333065553493296640760748560207343510400633813116524750123642650624"
+						],
+						"m_allowedObserveTypes": [3, 1],
+						"m_allowedAIBuilds": [
+							255,
+							"28269555624668103585593031394666829325638227369421183640952235678466637299712"
+						]
+					}
+				],
+				"m_defaultDifficulty": 3,
+				"m_defaultAIBuild": 0,
+				"m_cacheHandles": [],
+				"m_hasExtensionMod": false,
+				"m_hasNonBlizzardExtensionMod": false,
+				"m_isBlizzardMap": false,
+				"m_isPremadeFFA": false,
+				"m_isCoopMode": false,
+				"m_isRealtimeMode": false
+			},
+			"m_lobbyState": {
+				"m_phase": 0,
+				"m_maxUsers": 1,
+				"m_maxObservers": 0,
+				"m_slots": [
+					{
+						"m_control": 2,
+						"m_userId": 0,
+						"m_teamId": 0,
+						"m_colorPref": {
+							"m_color": 0
+						},
+						"m_racePref": {
+							"m_race": 0
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": 0,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					},
+					{
+						"m_control": 3,
+						"m_userId": null,
+						"m_teamId": 1,
+						"m_colorPref": {
+							"m_color": 4
+						},
+						"m_racePref": {
+							"m_race": 1
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": null,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					},
+					{
+						"m_control": 3,
+						"m_userId": null,
+						"m_teamId": 2,
+						"m_colorPref": {
+							"m_color": 0
+						},
+						"m_racePref": {
+							"m_race": 0
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": null,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					},
+					{
+						"m_control": 3,
+						"m_userId": null,
+						"m_teamId": 3,
+						"m_colorPref": {
+							"m_color": 1
+						},
+						"m_racePref": {
+							"m_race": 1
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": null,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					},
+					{
+						"m_control": 3,
+						"m_userId": null,
+						"m_teamId": 4,
+						"m_colorPref": {
+							"m_color": 1
+						},
+						"m_racePref": {
+							"m_race": 1
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": null,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					},
+					{
+						"m_control": 3,
+						"m_userId": null,
+						"m_teamId": 5,
+						"m_colorPref": {
+							"m_color": 14
+						},
+						"m_racePref": {
+							"m_race": 0
+						},
+						"m_difficulty": 3,
+						"m_aiBuild": 0,
+						"m_handicap": 100,
+						"m_observe": 0,
+						"m_logoIndex": 0,
+						"m_hero": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_skin": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_mount": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_artifacts": [],
+						"m_workingSetSlotId": null,
+						"m_rewards": [],
+						"m_toonHandle": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_licenses": [],
+						"m_tandemLeaderId": null,
+						"m_commander": {
+							"type": "Buffer",
+							"data": []
+						},
+						"m_commanderLevel": 0,
+						"m_hasSilencePenalty": false,
+						"m_tandemId": null,
+						"m_commanderMasteryLevel": 0,
+						"m_commanderMasteryTalents": [],
+						"m_trophyId": 0,
+						"m_rewardOverrides": [],
+						"m_brutalPlusDifficulty": 0,
+						"m_retryMutationIndexes": [],
+						"m_aCEnemyRace": 0,
+						"m_aCEnemyWaveType": 0,
+						"m_selectedCommanderPrestige": 0
+					}
+				],
+				"m_randomSeed": -1171252978,
+				"m_hostUserId": 0,
+				"m_isSinglePlayer": true,
+				"m_pickedMapTag": 0,
+				"m_gameDuration": 0,
+				"m_defaultDifficulty": 3,
+				"m_defaultAIBuild": 0
+			}
+		}
+	},
+	"metadata": {
+		"Title": "The Alexander",
+		"MapName": "Scattered/1-1_Alexander.SC2Map",
+		"GameVersion": "5.0.11.90136",
+		"DataBuild": "90136",
+		"DataVersion": "207F9DD45D02C9E6D19F868E0239E72D",
+		"BaseBuild": "Base90136",
+		"Duration": 241,
+		"Players": [
+			{
+				"PlayerID": 1,
+				"APM": 76,
+				"Result": "Undecided",
+				"SelectedRace": "Terr",
+				"AssignedRace": "Terr"
+			},
+			{
+				"PlayerID": 2,
+				"APM": 0,
+				"Result": "Undecided",
+				"SelectedRace": "Zerg",
+				"AssignedRace": "Zerg"
+			},
+			{
+				"PlayerID": 3,
+				"APM": 0,
+				"Result": "Undecided",
+				"SelectedRace": "Terr",
+				"AssignedRace": "Terr"
+			},
+			{
+				"PlayerID": 4,
+				"APM": 0,
+				"Result": "Undecided",
+				"SelectedRace": "Zerg",
+				"AssignedRace": "Zerg"
+			},
+			{
+				"PlayerID": 5,
+				"APM": 0,
+				"Result": "Undecided",
+				"SelectedRace": "Zerg",
+				"AssignedRace": "Zerg"
+			},
+			{
+				"PlayerID": 6,
+				"APM": 0,
+				"Result": "Undecided",
+				"SelectedRace": "Terr",
+				"AssignedRace": "Terr"
+			}
+		]
+	},
+	"attributes": {},
+	"firstTrackerEvent": {
+		"_event": "_error",
+		"_gameloop": 0,
+		"_error": "Corrupted Data"
+	},
+	"firstGameEvent": {
+		"m_syncInfo": {
+			"m_soundHash": [
+				2440161, 647686207, 1097899879, 1709561543, -2001404035, -101103124, 34975660,
+				1051398821, -1374275266, 1636575940, 2096591071, -97962802, 1696743476, 805102204,
+				1425313678, -655188527, 610193556, 667204077, 155361826, -341710625, 1508928727,
+				1272566587, -884419413, 1744822412, 29762163, 1000573945, -890650599, 879615576,
+				1955071389, -388943657, 1561302360, -121439896, 526824759, 657005092, 1024822592,
+				-1841722695, 1157976390, 66067640, 377202581, -1815224928, 1682168586, -42850877,
+				-584468546, -1576254469, -418056512, 254165062, 170213851, -942955348, -1742797427,
+				1646761961, -99997213, 286846085, -1879785182, 1159665767, 1920426428, 961075385,
+				365615462, 1479052838, -93192667, -981934791, -959395501, 1604849242, -795156344,
+				1425572526, 700713039, -534069851, -257352754, -678567651, -1386793811, -1511418421,
+				522555016, -832273154, -713066001, 1505352076, -611586272, -1855934711, -1864602862,
+				-1631902534, 2047167777, -1162542243, -668319975, 767252675, 472213006, 1530414146,
+				371513421, -1514100697, -2076531463, -337819173, -1187865735, -1266807576,
+				1238995791, -131571783, 615815052, -1566965753, 1859147446, 988125766, -782766870,
+				-768352074, 1410008154, -1752626011, -273622801, 109689345, -2068198454,
+				-1594835795, -992506332, 2073626334, 2015800703, 1409746033, -1519606438, 324959380
+			],
+			"m_length": [
+				4750, 4690, 1216, 1099, 1082, 4797, 4960, 3986, 4436, 4271, 4365, 4932, 4591, 4323,
+				5027, 2075, 1555, 1950, 1888, 2328, 2289, 2592, 2700, 2742, 2726, 4027, 4301, 3602,
+				4453, 3737, 3751, 4285, 4190, 3698, 4017, 3219, 2834, 2570, 2897, 2730, 2652, 2530,
+				3050, 2918, 2620, 4010, 3471, 3057, 3661, 3655, 3127, 2146, 2426, 2252, 2147, 9898,
+				9984, 3385, 4524, 6404, 7480, 263, 601, 210, 234, 800, 782, 694, 1067, 440, 367,
+				351, 4300, 2319, 2319, 913, 840, 951, 1085, 1086, 1155, 1322, 1362, 1430, 2386,
+				2273, 2998, 2649, 2302, 1966, 1721, 1583, 1764, 1586, 1492, 1780, 1367, 1317, 1364,
+				1606, 1870, 1551, 1651, 709, 836, 695, 1001, 1018, 1127, 561
+			]
+		},
+		"_event": "NNet.Game.STriggerSoundLengthSyncEvent",
+		"_eventid": 56,
+		"_gameloop": 0,
+		"_userid": {
+			"m_userId": 0
+		},
+		"_bits": 7080
+	},
+	"firstMessageEvent": {
+		"m_progress": -4294967286,
+		"_event": "NNet.Game.SLoadingProgressMessage",
+		"_eventid": 2,
+		"_gameloop": 0,
+		"_userid": {
+			"m_userId": 0
+		},
+		"_bits": 56
+	}
 }

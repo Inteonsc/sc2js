@@ -1,59 +1,63 @@
 import { describe, test, expect } from "vitest";
 import AttributeCodes from "../src/reader/attributes.js";
-import { getAvailableBuilds, findNearestBuild, loadProtocol } from "../src/reader/protocolLoader";  
-import { unitTag, unitTagIndex, unitTagRecycle, decodeReplayDetails, decodeReplayTrackerEvents, decodeReplayHeader, 
-    decodeReplayGameEvents, decodeReplayMessageEvents, decodeReplayInitData, decodeReplayAttributesEvents } from '../src/reader/protocolDecoder.js';
-import { MPQArchive } from '../src/reader/mpq.js';
+import { getAvailableBuilds, findNearestBuild, loadProtocol } from "../src/reader/protocolLoader";
+import {
+	unitTag,
+	unitTagIndex,
+	unitTagRecycle,
+	decodeReplayDetails,
+	decodeReplayTrackerEvents,
+	decodeReplayHeader,
+	decodeReplayGameEvents,
+	decodeReplayMessageEvents,
+	decodeReplayInitData,
+	decodeReplayAttributesEvents,
+} from "../src/reader/protocolDecoder.js";
+import { MPQArchive } from "../src/reader/mpq.js";
 
-const mpq = new MPQArchive('tests/fixtures/testreplay.SC2Replay', false);
+const mpq = new MPQArchive("tests/fixtures/testreplay.SC2Replay", false);
 const protocol = loadProtocol(95299);
 
-    
-
 describe("Protocol Loader", () => {
-    test("getAvailableBuilds returns sorted list", () => {
-        const builds = getAvailableBuilds();
-        expect(builds).toBeDefined();
-        expect(builds).toEqual([...builds].sort((a,b) => a-b));
-    })
+	test("getAvailableBuilds returns sorted list", () => {
+		const builds = getAvailableBuilds();
+		expect(builds).toBeDefined();
+		expect(builds).toEqual([...builds].sort((a, b) => a - b));
+	});
 
-    test("findNearestBuild Returns correct build", () => {
-        const buildNumber = findNearestBuild(55505);
-        expect(buildNumber).toBe(55505);
-    })
+	test("findNearestBuild Returns correct build", () => {
+		const buildNumber = findNearestBuild(55505);
+		expect(buildNumber).toBe(55505);
+	});
 
-    test("findNearestBuild finds closest build", () => {
-        const buildNumber = findNearestBuild(55900);
-        expect(buildNumber).toBe(55505);
-    })
+	test("findNearestBuild finds closest build", () => {
+		const buildNumber = findNearestBuild(55900);
+		expect(buildNumber).toBe(55505);
+	});
 
-    test("findNearestBuild throws when build is too old", () => {
-        expect(() => findNearestBuild(10000)).toThrow();
-    })
-    test("loadprotocol returns valid protocol", () => {
-        const protocol = loadProtocol(55505);
-        expect(protocol).toBeDefined();
-        expect(protocol.typeinfos).toBeDefined();
-        expect(protocol.game_event_types).toBeDefined();
-        expect(protocol.replay_initdata_typeid).toBe(73);
-        expect(protocol.message_eventid_typeid).toBe(1)
-        const [typeid, name] = protocol.message_event_types[0];
-        expect(typeid).toBe(190);
-        expect(name).toBe("NNet.Game.SChatMessage");
-
-
-    })
-    test("loadprotocol caches correctly", () => {
-        const first = loadProtocol(95299);
-        const second = loadProtocol(95299);
-        expect(first).toBe(second);
-    })
+	test("findNearestBuild throws when build is too old", () => {
+		expect(() => findNearestBuild(10000)).toThrow();
+	});
+	test("loadprotocol returns valid protocol", () => {
+		const protocol = loadProtocol(55505);
+		expect(protocol).toBeDefined();
+		expect(protocol.typeinfos).toBeDefined();
+		expect(protocol.game_event_types).toBeDefined();
+		expect(protocol.replay_initdata_typeid).toBe(73);
+		expect(protocol.message_eventid_typeid).toBe(1);
+		const [typeid, name] = protocol.message_event_types[0];
+		expect(typeid).toBe(190);
+		expect(name).toBe("NNet.Game.SChatMessage");
+	});
+	test("loadprotocol caches correctly", () => {
+		const first = loadProtocol(95299);
+		const second = loadProtocol(95299);
+		expect(first).toBe(second);
+	});
 });
 
-
-
 describe("Protocol Decoder", () => {
-    describe("unitTag", () => {
+	describe("unitTag", () => {
 		test("packs index and recycle into a single integer", () => {
 			expect(unitTag(1, 0)).toBe(1 << 18);
 		});
@@ -129,12 +133,10 @@ describe("Protocol Decoder", () => {
 		test("first event is SPlayerSetupEvent", () => {
 			const bytes = mpq.readFile("replay.tracker.events");
 			const events = [...decodeReplayTrackerEvents(bytes, protocol)];
-			expect(events[0]._event).toBe(
-				"NNet.Replay.Tracker.SPlayerSetupEvent",
-			);
+			expect(events[0]._event).toBe("NNet.Replay.Tracker.SPlayerSetupEvent");
 		});
 	});
-    //TODO replay header might be stored in user data header instead
+	//TODO replay header might be stored in user data header instead
 	describe("decodeReplayHeader", () => {
 		test("returns build number", () => {
 			const bytes = mpq.UserDataHeader.user_data_content;
@@ -180,9 +182,9 @@ describe("Protocol Decoder", () => {
 			const attributes = decodeReplayAttributesEvents(bytes);
 			expect(attributes).toBeDefined();
 			expect(attributes.scopes).toBeDefined();
-            expect(attributes.scopes["16"][AttributeCodes.GAME_SPEED][0].value.toString("utf-8")).toBe("Fasr");
-            
+			expect(
+				attributes.scopes["16"][AttributeCodes.GAME_SPEED][0].value.toString("utf-8")
+			).toBe("Fasr");
 		});
 	});
-
-})
+});

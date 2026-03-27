@@ -1,3253 +1,1685 @@
 {
-  "listfiles": "replay.attributes.events\r\nreplay.details\r\nreplay.game.events\r\nreplay.initData\r\nreplay.load.info\r\nreplay.message.events\r\nreplay.resumable.events\r\nreplay.server.battlelobby\r\nreplay.smartcam.events\r\nreplay.sync.events\r\nreplay.sync.history\r\nreplay.tracker.events\r\n",
-  "header": {
-    "m_signature": {
-      "type": "Buffer",
-      "data": [
-        83,
-        116,
-        97,
-        114,
-        67,
-        114,
-        97,
-        102,
-        116,
-        32,
-        73,
-        73,
-        32,
-        114,
-        101,
-        112,
-        108,
-        97,
-        121,
-        27,
-        49,
-        49
-      ]
-    },
-    "m_version": {
-      "m_flags": 1,
-      "m_major": 3,
-      "m_minor": 0,
-      "m_revision": 4,
-      "m_build": 38996,
-      "m_baseBuild": 38996
-    },
-    "m_type": 2,
-    "m_elapsedGameLoops": 12255,
-    "m_useScaledTime": true
-  },
-  "details": {
-    "m_playerList": [
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            108,
-            112,
-            114,
-            111,
-            100,
-            117,
-            99,
-            116,
-            105,
-            111,
-            110,
-            115
-          ]
-        },
-        "m_toon": {
-          "m_region": 2,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              83,
-              50
-            ]
-          },
-          "m_realm": 1,
-          "m_id": 4746605
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            90,
-            101,
-            114,
-            103
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 28,
-          "m_g": 167,
-          "m_b": 234
-        },
-        "m_control": 2,
-        "m_teamId": 0,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 1,
-        "m_workingSetSlotId": 0
-      },
-      {
-        "m_name": {
-          "type": "Buffer",
-          "data": [
-            65,
-            46,
-            73,
-            46,
-            32,
-            49,
-            32,
-            40,
-            86,
-            101,
-            114,
-            121,
-            32,
-            69,
-            97,
-            115,
-            121,
-            41
-          ]
-        },
-        "m_toon": {
-          "m_region": 0,
-          "m_programId": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_realm": 0,
-          "m_id": 0
-        },
-        "m_race": {
-          "type": "Buffer",
-          "data": [
-            90,
-            101,
-            114,
-            103
-          ]
-        },
-        "m_color": {
-          "m_a": 255,
-          "m_r": 0,
-          "m_g": 66,
-          "m_b": 255
-        },
-        "m_control": 3,
-        "m_teamId": 1,
-        "m_handicap": 100,
-        "m_observe": 0,
-        "m_result": 2,
-        "m_workingSetSlotId": 1
-      }
-    ],
-    "m_title": {
-      "type": "Buffer",
-      "data": [
-        68,
-        117,
-        115,
-        107,
-        32,
-        84,
-        111,
-        119,
-        101,
-        114,
-        115
-      ]
-    },
-    "m_difficulty": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_thumbnail": {
-      "m_file": {
-        "type": "Buffer",
-        "data": [
-          77,
-          105,
-          110,
-          105,
-          109,
-          97,
-          112,
-          46,
-          116,
-          103,
-          97
-        ]
-      }
-    },
-    "m_isBlizzardMap": true,
-    "m_timeUTC": "130918406052131031",
-    "m_timeLocalOffset": 0,
-    "m_description": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_imageFilePath": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_mapFileName": {
-      "type": "Buffer",
-      "data": []
-    },
-    "m_cacheHandles": [
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          109,
-          228,
-          21,
-          3,
-          186,
-          204,
-          208,
-          86,
-          86,
-          54,
-          11,
-          111,
-          2,
-          125,
-          184,
-          129,
-          105,
-          250,
-          25,
-          137,
-          187,
-          99,
-          87,
-          177,
-          178,
-          21,
-          162,
-          84,
-          121,
-          57,
-          245,
-          251
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          66,
-          28,
-          138,
-          160,
-          243,
-          97,
-          155,
-          101,
-          45,
-          35,
-          162,
-          115,
-          93,
-          254,
-          232,
-          18,
-          171,
-          100,
-          66,
-          40,
-          35,
-          94,
-          122,
-          121,
-          126,
-          222,
-          207,
-          232,
-          182,
-          125,
-          163,
-          14
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          102,
-          9,
-          56,
-          50,
-          18,
-          132,
-          83,
-          239,
-          255,
-          187,
-          120,
-          124,
-          128,
-          183,
-          211,
-          238,
-          193,
-          173,
-          129,
-          189,
-          229,
-          92,
-          131,
-          201,
-          48,
-          222,
-          167,
-          156,
-          78,
-          80,
-          90,
-          4
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          217,
-          45,
-          252,
-          72,
-          196,
-          132,
-          197,
-          145,
-          84,
-          39,
-          11,
-          146,
-          74,
-          215,
-          213,
-          116,
-          132,
-          242,
-          171,
-          154,
-          71,
-          98,
-          28,
-          122,
-          177,
-          100,
-          49,
-          191,
-          102,
-          197,
-          59,
-          64
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          87,
-          180,
-          172,
-          11,
-          61,
-          218,
-          208,
-          84,
-          186,
-          223,
-          133,
-          169,
-          76,
-          102,
-          110,
-          87,
-          228,
-          118,
-          157,
-          8,
-          120,
-          202,
-          150,
-          114,
-          7,
-          158,
-          201,
-          54,
-          184,
-          11,
-          152,
-          220
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          127,
-          65,
-          65,
-          26,
-          165,
-          151,
-          244,
-          180,
-          100,
-          64,
-          212,
-          42,
-          86,
-          51,
-          72,
-          191,
-          83,
-          130,
-          45,
-          42,
-          104,
-          17,
-          47,
-          1,
-          4,
-          249,
-          184,
-          145,
-          246,
-          240,
-          90,
-          225
-        ]
-      },
-      {
-        "type": "Buffer",
-        "data": [
-          115,
-          50,
-          109,
-          97,
-          0,
-          0,
-          69,
-          85,
-          251,
-          201,
-          106,
-          141,
-          169,
-          117,
-          45,
-          6,
-          4,
-          157,
-          218,
-          33,
-          226,
-          18,
-          89,
-          21,
-          167,
-          82,
-          127,
-          189,
-          57,
-          123,
-          144,
-          7,
-          194,
-          142,
-          106,
-          13,
-          79,
-          55,
-          35,
-          113
-        ]
-      }
-    ],
-    "m_miniSave": false,
-    "m_gameSpeed": 4,
-    "m_defaultDifficulty": 3,
-    "m_modPaths": null,
-    "m_campaignIndex": 0,
-    "m_restartAsTransitionMap": false
-  },
-  "initData": {
-    "m_syncLobbyState": {
-      "m_userInitialData": [
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              108,
-              112,
-              114,
-              111,
-              100,
-              117,
-              99,
-              116,
-              105,
-              111,
-              110,
-              115
-            ]
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": 8,
-          "m_combinedRaceLevels": 55,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 16,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": true,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 1048620,
-          "m_racePreference": {
-            "m_race": 255
-          },
-          "m_teamPreference": {
-            "m_team": 255
-          },
-          "m_testMap": true,
-          "m_testAuto": true,
-          "m_examine": true,
-          "m_customInterface": true,
-          "m_observe": 3
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 4098,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 3
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              2,
-              252,
-              255,
-              255,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              118,
-              179,
-              83,
-              26,
-              1,
-              0,
-              68,
-              102,
-              108,
-              116,
-              17,
-              4,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              132,
-              9,
-              114,
-              4,
-              65,
-              2,
-              1,
-              176,
-              184,
-              60,
-              167,
-              82,
-              42,
-              0,
-              0,
-              13,
-              50,
-              45,
-              83,
-              50,
-              45,
-              49,
-              45,
-              49,
-              54,
-              53,
-              50,
-              53,
-              49,
-              91,
-              27,
-              116,
-              126,
-              80,
-              248,
-              223,
-              7,
-              187,
-              240,
-              224,
-              112,
-              0,
-              240,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              125,
-              0,
-              0,
-              192,
-              1,
-              127,
-              60,
-              0,
-              192,
-              3,
-              31,
-              28,
-              0,
-              192,
-              7,
-              31,
-              28,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              240,
-              247,
-              31,
-              227,
-              224,
-              248,
-              28,
-              0,
-              192,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              255,
-              127,
-              64,
-              0,
-              48,
-              0,
-              95,
-              207,
-              0,
-              192,
-              0,
-              199,
-              199,
-              0,
-              48,
-              1,
-              199,
-              31,
-              0
-            ]
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 538968112,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": true,
-          "m_examine": false,
-          "m_customInterface": true,
-          "m_observe": 3
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": [
-              0,
-              0,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              128,
-              255,
-              127,
-              208,
-              0,
-              12,
-              0,
-              23,
-              243,
-              192,
-              192,
-              0,
-              49,
-              241,
-              12,
-              12,
-              0,
-              113,
-              31,
-              192,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              64,
-              0,
-              128,
-              2,
-              129,
-              252,
-              129,
-              192,
-              0,
-              252,
-              7,
-              192,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              254,
-              127,
-              244,
-              0,
-              3,
-              0,
-              5,
-              252,
-              240,
-              192,
-              0,
-              12,
-              124,
-              28,
-              3,
-              0,
-              28,
-              31,
-              112,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              64,
-              0,
-              32,
-              0,
-              131,
-              240,
-              224,
-              112,
-              0,
-              240,
-              15,
-              112,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              248,
-              255,
-              125,
-              0,
-              0,
-              192,
-              1,
-              127,
-              60,
-              0,
-              192,
-              3,
-              31,
-              28,
-              0,
-              192,
-              7,
-              31,
-              28,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              16,
-              8,
-              0,
-              3,
-              224,
-              248,
-              28,
-              0,
-              192,
-              63,
-              28,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": {
-            "type": "Buffer",
-            "data": [
-              64,
-              0,
-              48,
-              0,
-              95,
-              207,
-              0,
-              192,
-              0,
-              199,
-              199,
-              0,
-              48,
-              1,
-              199,
-              31,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              32,
-              2,
-              0,
-              3,
-              128,
-              254,
-              7,
-              0,
-              0,
-              255,
-              7,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              128,
-              255,
-              127,
-              208,
-              0,
-              12,
-              0,
-              23,
-              243,
-              192,
-              192,
-              0,
-              49,
-              241,
-              12,
-              12,
-              0,
-              113,
-              31,
-              192,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              64,
-              0,
-              128,
-              2,
-              129,
-              252,
-              129,
-              192,
-              0,
-              252,
-              7,
-              192,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              254,
-              127,
-              244,
-              0,
-              3,
-              0,
-              5,
-              252,
-              240,
-              192,
-              0,
-              12,
-              124,
-              28,
-              3,
-              0,
-              28,
-              31,
-              112,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              64,
-              0,
-              32,
-              0,
-              131,
-              240,
-              224,
-              112,
-              0,
-              240,
-              15,
-              112,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              248,
-              255,
-              125,
-              0,
-              0,
-              192,
-              1,
-              127,
-              60,
-              0,
-              192,
-              3,
-              31,
-              28,
-              0,
-              192,
-              7,
-              31,
-              28,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          },
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 32832,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": true,
-          "m_observe": 1
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": -239072241,
-          "m_randomSeed": 834666496,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        },
-        {
-          "m_name": {
-            "type": "Buffer",
-            "data": []
-          },
-          "m_clanTag": null,
-          "m_clanLogo": null,
-          "m_highestLeague": null,
-          "m_combinedRaceLevels": null,
-          "m_randomSeed": 0,
-          "m_racePreference": {
-            "m_race": null
-          },
-          "m_teamPreference": {
-            "m_team": null
-          },
-          "m_testMap": false,
-          "m_testAuto": false,
-          "m_examine": false,
-          "m_customInterface": false,
-          "m_observe": 0
-        }
-      ],
-      "m_gameDescription": {
-        "m_randomValue": 0,
-        "m_gameCacheName": {
-          "type": "Buffer",
-          "data": []
-        },
-        "m_gameOptions": {
-          "m_lockTeams": false,
-          "m_teamsTogether": false,
-          "m_advancedSharedControl": false,
-          "m_randomRaces": false,
-          "m_battleNet": false,
-          "m_amm": false,
-          "m_competitive": false,
-          "m_noVictoryOrDefeat": false,
-          "m_fog": 0,
-          "m_observers": 0,
-          "m_userDifficulty": 0,
-          "m_clientDebugFlags": "3686399"
-        },
-        "m_gameSpeed": 2,
-        "m_gameType": 0,
-        "m_maxUsers": 8,
-        "m_maxObservers": 0,
-        "m_maxPlayers": 0,
-        "m_maxTeams": 7,
-        "m_maxColors": 0,
-        "m_maxRaces": 32,
-        "m_maxControls": 79,
-        "m_mapSizeX": 192,
-        "m_mapSizeY": 0,
-        "m_mapFileSyncChecksum": -1072105248,
-        "m_mapFileName": {
-          "type": "Buffer",
-          "data": [
-            1,
-            199,
-            31,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            32,
-            2,
-            0,
-            3,
-            128,
-            254,
-            7,
-            0,
-            0,
-            255,
-            7,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        "m_mapAuthorName": {
-          "type": "Buffer",
-          "data": []
-        },
-        "m_modFileSyncChecksum": 0,
-        "m_slotDescriptions": [],
-        "m_defaultDifficulty": 0,
-        "m_defaultAIBuild": 0,
-        "m_cacheHandles": [],
-        "m_hasExtensionMod": false,
-        "m_isBlizzardMap": false,
-        "m_isPremadeFFA": false,
-        "m_isCoopMode": false
-      },
-      "m_lobbyState": {
-        "m_phase": 0,
-        "m_maxUsers": 0,
-        "m_maxObservers": 0,
-        "m_slots": [],
-        "m_randomSeed": 541056976,
-        "m_hostUserId": 8,
-        "m_isSinglePlayer": false,
-        "m_gameDuration": 12583283,
-        "m_defaultDifficulty": 60,
-        "m_defaultAIBuild": 96
-      }
-    }
-  },
-  "metadata": null,
-  "attributes": {
-    "source": 0,
-    "mapNamespace": 0,
-    "scopes": {
-      "1": {
-        "500": [
-          {
-            "namespace": 999,
-            "attrid": 500,
-            "value": "Humn"
-          }
-        ],
-        "2002": [
-          {
-            "namespace": 999,
-            "attrid": 2002,
-            "value": "T1"
-          }
-        ],
-        "2003": [
-          {
-            "namespace": 999,
-            "attrid": 2003,
-            "value": "T1"
-          }
-        ],
-        "2004": [
-          {
-            "namespace": 999,
-            "attrid": 2004,
-            "value": "T1"
-          }
-        ],
-        "2005": [
-          {
-            "namespace": 999,
-            "attrid": 2005,
-            "value": "T1"
-          }
-        ],
-        "2006": [
-          {
-            "namespace": 999,
-            "attrid": 2006,
-            "value": "T1"
-          }
-        ],
-        "2007": [
-          {
-            "namespace": 999,
-            "attrid": 2007,
-            "value": "T1"
-          }
-        ],
-        "2008": [
-          {
-            "namespace": 999,
-            "attrid": 2008,
-            "value": "T1"
-          }
-        ],
-        "2011": [
-          {
-            "namespace": 999,
-            "attrid": 2011,
-            "value": "T1"
-          }
-        ],
-        "2018": [
-          {
-            "namespace": 999,
-            "attrid": 2018,
-            "value": "T1"
-          }
-        ],
-        "2024": [
-          {
-            "namespace": 999,
-            "attrid": 2024,
-            "value": "T1"
-          }
-        ],
-        "3001": [
-          {
-            "namespace": 999,
-            "attrid": 3001,
-            "value": "Zerg"
-          }
-        ],
-        "3002": [
-          {
-            "namespace": 999,
-            "attrid": 3002,
-            "value": "tc03"
-          }
-        ],
-        "3003": [
-          {
-            "namespace": 999,
-            "attrid": 3003,
-            "value": " 100"
-          }
-        ],
-        "3004": [
-          {
-            "namespace": 999,
-            "attrid": 3004,
-            "value": "Medi"
-          }
-        ],
-        "3007": [
-          {
-            "namespace": 999,
-            "attrid": 3007,
-            "value": "Part"
-          }
-        ],
-        "3008": [
-          {
-            "namespace": 999,
-            "attrid": 3008,
-            "value": "Obs"
-          }
-        ],
-        "3011": [
-          {
-            "namespace": 999,
-            "attrid": 3011,
-            "value": "   0"
-          }
-        ],
-        "3012": [
-          {
-            "namespace": 999,
-            "attrid": 3012,
-            "value": "  22"
-          }
-        ],
-        "3013": [
-          {
-            "namespace": 999,
-            "attrid": 3013,
-            "value": ""
-          }
-        ],
-        "3014": [
-          {
-            "namespace": 999,
-            "attrid": 3014,
-            "value": "   1"
-          }
-        ],
-        "3102": [
-          {
-            "namespace": 999,
-            "attrid": 3102,
-            "value": "AB00"
-          }
-        ],
-        "3103": [
-          {
-            "namespace": 999,
-            "attrid": 3103,
-            "value": "AB00"
-          }
-        ],
-        "3104": [
-          {
-            "namespace": 999,
-            "attrid": 3104,
-            "value": "AB00"
-          }
-        ],
-        "3105": [
-          {
-            "namespace": 999,
-            "attrid": 3105,
-            "value": "AB00"
-          }
-        ],
-        "3106": [
-          {
-            "namespace": 999,
-            "attrid": 3106,
-            "value": "AB00"
-          }
-        ],
-        "3107": [
-          {
-            "namespace": 999,
-            "attrid": 3107,
-            "value": "AB00"
-          }
-        ],
-        "3108": [
-          {
-            "namespace": 999,
-            "attrid": 3108,
-            "value": "AB00"
-          }
-        ],
-        "3109": [
-          {
-            "namespace": 999,
-            "attrid": 3109,
-            "value": "AB00"
-          }
-        ],
-        "3110": [
-          {
-            "namespace": 999,
-            "attrid": 3110,
-            "value": "AB00"
-          }
-        ],
-        "3111": [
-          {
-            "namespace": 999,
-            "attrid": 3111,
-            "value": "AB00"
-          }
-        ],
-        "3134": [
-          {
-            "namespace": 999,
-            "attrid": 3134,
-            "value": "AB00"
-          }
-        ],
-        "3135": [
-          {
-            "namespace": 999,
-            "attrid": 3135,
-            "value": "AB00"
-          }
-        ],
-        "3136": [
-          {
-            "namespace": 999,
-            "attrid": 3136,
-            "value": "AB00"
-          }
-        ],
-        "3137": [
-          {
-            "namespace": 999,
-            "attrid": 3137,
-            "value": "AB00"
-          }
-        ],
-        "3138": [
-          {
-            "namespace": 999,
-            "attrid": 3138,
-            "value": "AB00"
-          }
-        ],
-        "3139": [
-          {
-            "namespace": 999,
-            "attrid": 3139,
-            "value": "AB00"
-          }
-        ],
-        "3140": [
-          {
-            "namespace": 999,
-            "attrid": 3140,
-            "value": "AB00"
-          }
-        ],
-        "3141": [
-          {
-            "namespace": 999,
-            "attrid": 3141,
-            "value": "AB00"
-          }
-        ],
-        "3142": [
-          {
-            "namespace": 999,
-            "attrid": 3142,
-            "value": "AB00"
-          }
-        ],
-        "3143": [
-          {
-            "namespace": 999,
-            "attrid": 3143,
-            "value": "AB00"
-          }
-        ],
-        "3166": [
-          {
-            "namespace": 999,
-            "attrid": 3166,
-            "value": "AB00"
-          }
-        ],
-        "3167": [
-          {
-            "namespace": 999,
-            "attrid": 3167,
-            "value": "AB00"
-          }
-        ],
-        "3168": [
-          {
-            "namespace": 999,
-            "attrid": 3168,
-            "value": "AB00"
-          }
-        ],
-        "3169": [
-          {
-            "namespace": 999,
-            "attrid": 3169,
-            "value": "AB00"
-          }
-        ],
-        "3170": [
-          {
-            "namespace": 999,
-            "attrid": 3170,
-            "value": "AB00"
-          }
-        ],
-        "3171": [
-          {
-            "namespace": 999,
-            "attrid": 3171,
-            "value": "AB00"
-          }
-        ],
-        "3172": [
-          {
-            "namespace": 999,
-            "attrid": 3172,
-            "value": "AB00"
-          }
-        ],
-        "3173": [
-          {
-            "namespace": 999,
-            "attrid": 3173,
-            "value": "AB00"
-          }
-        ],
-        "3174": [
-          {
-            "namespace": 999,
-            "attrid": 3174,
-            "value": "AB00"
-          }
-        ],
-        "3175": [
-          {
-            "namespace": 999,
-            "attrid": 3175,
-            "value": "AB00"
-          }
-        ],
-        "3198": [
-          {
-            "namespace": 999,
-            "attrid": 3198,
-            "value": "AB00"
-          }
-        ],
-        "3199": [
-          {
-            "namespace": 999,
-            "attrid": 3199,
-            "value": "AB00"
-          }
-        ],
-        "3200": [
-          {
-            "namespace": 999,
-            "attrid": 3200,
-            "value": "AB00"
-          }
-        ],
-        "3201": [
-          {
-            "namespace": 999,
-            "attrid": 3201,
-            "value": "AB00"
-          }
-        ],
-        "3202": [
-          {
-            "namespace": 999,
-            "attrid": 3202,
-            "value": "AB00"
-          }
-        ],
-        "3203": [
-          {
-            "namespace": 999,
-            "attrid": 3203,
-            "value": "AB00"
-          }
-        ],
-        "3204": [
-          {
-            "namespace": 999,
-            "attrid": 3204,
-            "value": "AB00"
-          }
-        ],
-        "3205": [
-          {
-            "namespace": 999,
-            "attrid": 3205,
-            "value": "AB00"
-          }
-        ],
-        "3206": [
-          {
-            "namespace": 999,
-            "attrid": 3206,
-            "value": "AB00"
-          }
-        ],
-        "3207": [
-          {
-            "namespace": 999,
-            "attrid": 3207,
-            "value": "AB00"
-          }
-        ],
-        "4001": [
-          {
-            "namespace": 999,
-            "attrid": 4001,
-            "value": "no"
-          }
-        ],
-        "4005": [
-          {
-            "namespace": 999,
-            "attrid": 4005,
-            "value": "no"
-          }
-        ]
-      },
-      "2": {
-        "500": [
-          {
-            "namespace": 999,
-            "attrid": 500,
-            "value": "Comp"
-          }
-        ],
-        "2002": [
-          {
-            "namespace": 999,
-            "attrid": 2002,
-            "value": "T2"
-          }
-        ],
-        "2003": [
-          {
-            "namespace": 999,
-            "attrid": 2003,
-            "value": "T2"
-          }
-        ],
-        "2004": [
-          {
-            "namespace": 999,
-            "attrid": 2004,
-            "value": "T2"
-          }
-        ],
-        "2005": [
-          {
-            "namespace": 999,
-            "attrid": 2005,
-            "value": "T2"
-          }
-        ],
-        "2006": [
-          {
-            "namespace": 999,
-            "attrid": 2006,
-            "value": "T2"
-          }
-        ],
-        "2007": [
-          {
-            "namespace": 999,
-            "attrid": 2007,
-            "value": "T2"
-          }
-        ],
-        "2008": [
-          {
-            "namespace": 999,
-            "attrid": 2008,
-            "value": "T2"
-          }
-        ],
-        "2011": [
-          {
-            "namespace": 999,
-            "attrid": 2011,
-            "value": "T2"
-          }
-        ],
-        "2018": [
-          {
-            "namespace": 999,
-            "attrid": 2018,
-            "value": "T2"
-          }
-        ],
-        "2024": [
-          {
-            "namespace": 999,
-            "attrid": 2024,
-            "value": "T2"
-          }
-        ],
-        "3001": [
-          {
-            "namespace": 999,
-            "attrid": 3001,
-            "value": "RAND"
-          }
-        ],
-        "3002": [
-          {
-            "namespace": 999,
-            "attrid": 3002,
-            "value": "tc02"
-          }
-        ],
-        "3003": [
-          {
-            "namespace": 999,
-            "attrid": 3003,
-            "value": " 100"
-          }
-        ],
-        "3004": [
-          {
-            "namespace": 999,
-            "attrid": 3004,
-            "value": "VyEy"
-          }
-        ],
-        "3007": [
-          {
-            "namespace": 999,
-            "attrid": 3007,
-            "value": "Part"
-          }
-        ],
-        "3008": [
-          {
-            "namespace": 999,
-            "attrid": 3008,
-            "value": "Obs"
-          }
-        ],
-        "3011": [
-          {
-            "namespace": 999,
-            "attrid": 3011,
-            "value": "   0"
-          }
-        ],
-        "3012": [
-          {
-            "namespace": 999,
-            "attrid": 3012,
-            "value": "  22"
-          }
-        ],
-        "3013": [
-          {
-            "namespace": 999,
-            "attrid": 3013,
-            "value": ""
-          }
-        ],
-        "3014": [
-          {
-            "namespace": 999,
-            "attrid": 3014,
-            "value": "   1"
-          }
-        ],
-        "3102": [
-          {
-            "namespace": 999,
-            "attrid": 3102,
-            "value": "AB00"
-          }
-        ],
-        "3103": [
-          {
-            "namespace": 999,
-            "attrid": 3103,
-            "value": "AB00"
-          }
-        ],
-        "3104": [
-          {
-            "namespace": 999,
-            "attrid": 3104,
-            "value": "AB00"
-          }
-        ],
-        "3105": [
-          {
-            "namespace": 999,
-            "attrid": 3105,
-            "value": "AB00"
-          }
-        ],
-        "3106": [
-          {
-            "namespace": 999,
-            "attrid": 3106,
-            "value": "AB00"
-          }
-        ],
-        "3107": [
-          {
-            "namespace": 999,
-            "attrid": 3107,
-            "value": "AB00"
-          }
-        ],
-        "3108": [
-          {
-            "namespace": 999,
-            "attrid": 3108,
-            "value": "AB00"
-          }
-        ],
-        "3109": [
-          {
-            "namespace": 999,
-            "attrid": 3109,
-            "value": "AB00"
-          }
-        ],
-        "3110": [
-          {
-            "namespace": 999,
-            "attrid": 3110,
-            "value": "AB00"
-          }
-        ],
-        "3111": [
-          {
-            "namespace": 999,
-            "attrid": 3111,
-            "value": "AB00"
-          }
-        ],
-        "3134": [
-          {
-            "namespace": 999,
-            "attrid": 3134,
-            "value": "AB00"
-          }
-        ],
-        "3135": [
-          {
-            "namespace": 999,
-            "attrid": 3135,
-            "value": "AB00"
-          }
-        ],
-        "3136": [
-          {
-            "namespace": 999,
-            "attrid": 3136,
-            "value": "AB00"
-          }
-        ],
-        "3137": [
-          {
-            "namespace": 999,
-            "attrid": 3137,
-            "value": "AB00"
-          }
-        ],
-        "3138": [
-          {
-            "namespace": 999,
-            "attrid": 3138,
-            "value": "AB00"
-          }
-        ],
-        "3139": [
-          {
-            "namespace": 999,
-            "attrid": 3139,
-            "value": "AB00"
-          }
-        ],
-        "3140": [
-          {
-            "namespace": 999,
-            "attrid": 3140,
-            "value": "AB00"
-          }
-        ],
-        "3141": [
-          {
-            "namespace": 999,
-            "attrid": 3141,
-            "value": "AB00"
-          }
-        ],
-        "3142": [
-          {
-            "namespace": 999,
-            "attrid": 3142,
-            "value": "AB00"
-          }
-        ],
-        "3143": [
-          {
-            "namespace": 999,
-            "attrid": 3143,
-            "value": "AB00"
-          }
-        ],
-        "3166": [
-          {
-            "namespace": 999,
-            "attrid": 3166,
-            "value": "AB00"
-          }
-        ],
-        "3167": [
-          {
-            "namespace": 999,
-            "attrid": 3167,
-            "value": "AB00"
-          }
-        ],
-        "3168": [
-          {
-            "namespace": 999,
-            "attrid": 3168,
-            "value": "AB00"
-          }
-        ],
-        "3169": [
-          {
-            "namespace": 999,
-            "attrid": 3169,
-            "value": "AB00"
-          }
-        ],
-        "3170": [
-          {
-            "namespace": 999,
-            "attrid": 3170,
-            "value": "AB00"
-          }
-        ],
-        "3171": [
-          {
-            "namespace": 999,
-            "attrid": 3171,
-            "value": "AB00"
-          }
-        ],
-        "3172": [
-          {
-            "namespace": 999,
-            "attrid": 3172,
-            "value": "AB00"
-          }
-        ],
-        "3173": [
-          {
-            "namespace": 999,
-            "attrid": 3173,
-            "value": "AB00"
-          }
-        ],
-        "3174": [
-          {
-            "namespace": 999,
-            "attrid": 3174,
-            "value": "AB00"
-          }
-        ],
-        "3175": [
-          {
-            "namespace": 999,
-            "attrid": 3175,
-            "value": "AB00"
-          }
-        ],
-        "3198": [
-          {
-            "namespace": 999,
-            "attrid": 3198,
-            "value": "AB00"
-          }
-        ],
-        "3199": [
-          {
-            "namespace": 999,
-            "attrid": 3199,
-            "value": "AB00"
-          }
-        ],
-        "3200": [
-          {
-            "namespace": 999,
-            "attrid": 3200,
-            "value": "AB00"
-          }
-        ],
-        "3201": [
-          {
-            "namespace": 999,
-            "attrid": 3201,
-            "value": "AB00"
-          }
-        ],
-        "3202": [
-          {
-            "namespace": 999,
-            "attrid": 3202,
-            "value": "AB00"
-          }
-        ],
-        "3203": [
-          {
-            "namespace": 999,
-            "attrid": 3203,
-            "value": "AB00"
-          }
-        ],
-        "3204": [
-          {
-            "namespace": 999,
-            "attrid": 3204,
-            "value": "AB00"
-          }
-        ],
-        "3205": [
-          {
-            "namespace": 999,
-            "attrid": 3205,
-            "value": "AB00"
-          }
-        ],
-        "3206": [
-          {
-            "namespace": 999,
-            "attrid": 3206,
-            "value": "AB00"
-          }
-        ],
-        "3207": [
-          {
-            "namespace": 999,
-            "attrid": 3207,
-            "value": "AB00"
-          }
-        ],
-        "4001": [
-          {
-            "namespace": 999,
-            "attrid": 4001,
-            "value": "no"
-          }
-        ],
-        "4005": [
-          {
-            "namespace": 999,
-            "attrid": 4005,
-            "value": "no"
-          }
-        ]
-      },
-      "16": {
-        "1000": [
-          {
-            "namespace": 999,
-            "attrid": 1000,
-            "value": "Dflt"
-          }
-        ],
-        "1001": [
-          {
-            "namespace": 999,
-            "attrid": 1001,
-            "value": "yes"
-          }
-        ],
-        "2000": [
-          {
-            "namespace": 999,
-            "attrid": 2000,
-            "value": "t2"
-          }
-        ],
-        "2001": [
-          {
-            "namespace": 999,
-            "attrid": 2001,
-            "value": "1v1"
-          }
-        ],
-        "3000": [
-          {
-            "namespace": 999,
-            "attrid": 3000,
-            "value": "Fasr"
-          }
-        ],
-        "3006": [
-          {
-            "namespace": 999,
-            "attrid": 3006,
-            "value": "10"
-          }
-        ],
-        "3009": [
-          {
-            "namespace": 999,
-            "attrid": 3009,
-            "value": "Priv"
-          }
-        ],
-        "3010": [
-          {
-            "namespace": 999,
-            "attrid": 3010,
-            "value": "yes"
-          }
-        ],
-        "3015": [
-          {
-            "namespace": 999,
-            "attrid": 3015,
-            "value": "0"
-          }
-        ],
-        "4000": [
-          {
-            "namespace": 999,
-            "attrid": 4000,
-            "value": "Norm"
-          }
-        ]
-      }
-    }
-  },
-  "firstTrackerEvent": {
-    "m_playerId": 1,
-    "m_type": 1,
-    "m_userId": 0,
-    "m_slotId": 0,
-    "_event": "NNet.Replay.Tracker.SPlayerSetupEvent",
-    "_eventid": 9,
-    "_gameloop": 0,
-    "_bits": 192
-  },
-  "firstGameEvent": {
-    "m_syncInfo": {
-      "m_soundHash": [
-        -101103124,
-        34975660,
-        1051398821,
-        -1374275266,
-        1636575940,
-        2096591071,
-        -97962802,
-        1696743476,
-        805102204,
-        1425313678,
-        -655188527,
-        610193556,
-        667204077,
-        155361826,
-        -341710625,
-        1508928727,
-        1272566587,
-        -884419413,
-        1744822412,
-        29762163,
-        1000573945,
-        -890650599,
-        879615576,
-        1955071389,
-        -388943657,
-        1561302360,
-        -121439896,
-        526824759,
-        657005092,
-        1024822592,
-        -1841722695,
-        1157976390,
-        66067640,
-        377202581,
-        -1815224928,
-        1682168586,
-        -42850877,
-        -584468546,
-        -1576254469,
-        -418056512,
-        254165062,
-        170213851,
-        -942955348,
-        -1742797427,
-        1646761961,
-        -99997213,
-        286846085,
-        -1879785182,
-        1159665767,
-        1920426428,
-        1604849242,
-        -795156344,
-        1425572526,
-        700713039,
-        -534069851,
-        -257352754,
-        -678567651,
-        -1386793811,
-        -1511418421,
-        522555016,
-        -832273154,
-        -1631902534,
-        2047167777,
-        -1162542243,
-        -668319975,
-        767252675,
-        472213006,
-        1530414146,
-        371513421,
-        -1514100697,
-        -2076531463,
-        -337819173,
-        -1187865735,
-        -1266807576,
-        1238995791,
-        -131571783,
-        615815052,
-        -1566965753,
-        1859147446,
-        988125766,
-        -782766870,
-        -768352074,
-        1410008154,
-        -1752626011,
-        -273622801,
-        109689345,
-        -2068198454,
-        -1594835795,
-        -992506332,
-        2073626334,
-        2015800703,
-        1409746033,
-        -1519606438,
-        324959380,
-        -1907646259,
-        -1783795846,
-        -1252343982,
-        1272313176,
-        1767014751,
-        -1083891466,
-        655102287,
-        716264860,
-        651486182,
-        -1112355764,
-        -1355329557,
-        -600429611,
-        -603897640,
-        -1240423688
-      ],
-      "m_length": [
-        4797,
-        4960,
-        3986,
-        4436,
-        4271,
-        4365,
-        4932,
-        4591,
-        4323,
-        5027,
-        2075,
-        1555,
-        1950,
-        1888,
-        2328,
-        2289,
-        2592,
-        2700,
-        2742,
-        2726,
-        4027,
-        4301,
-        3602,
-        4453,
-        3737,
-        3751,
-        4285,
-        4190,
-        3698,
-        4017,
-        3219,
-        2834,
-        2570,
-        2897,
-        2730,
-        2652,
-        2530,
-        3050,
-        2918,
-        2620,
-        4010,
-        3471,
-        3057,
-        3661,
-        3655,
-        3127,
-        2146,
-        2426,
-        2252,
-        2147,
-        263,
-        601,
-        210,
-        234,
-        800,
-        782,
-        694,
-        1067,
-        440,
-        367,
-        351,
-        951,
-        1085,
-        1086,
-        1155,
-        1322,
-        1362,
-        1430,
-        2386,
-        2273,
-        2998,
-        2649,
-        2302,
-        1966,
-        1721,
-        1583,
-        1764,
-        1586,
-        1492,
-        1780,
-        1367,
-        1317,
-        1364,
-        1606,
-        1870,
-        1551,
-        1651,
-        709,
-        836,
-        695,
-        1001,
-        1018,
-        1127,
-        561,
-        529,
-        398,
-        480,
-        410,
-        480,
-        553,
-        503,
-        493,
-        717,
-        1101,
-        1291,
-        1107,
-        1211,
-        1424
-      ]
-    },
-    "_event": "NNet.Game.STriggerSoundLengthSyncEvent",
-    "_eventid": 56,
-    "_gameloop": 0,
-    "_userid": {
-      "m_userId": 0
-    },
-    "_bits": 6952
-  },
-  "firstMessageEvent": null
+	"listfiles": "replay.attributes.events\r\nreplay.details\r\nreplay.game.events\r\nreplay.initData\r\nreplay.load.info\r\nreplay.message.events\r\nreplay.resumable.events\r\nreplay.server.battlelobby\r\nreplay.smartcam.events\r\nreplay.sync.events\r\nreplay.sync.history\r\nreplay.tracker.events\r\n",
+	"header": {
+		"m_signature": {
+			"type": "Buffer",
+			"data": [
+				83, 116, 97, 114, 67, 114, 97, 102, 116, 32, 73, 73, 32, 114, 101, 112, 108, 97,
+				121, 27, 49, 49
+			]
+		},
+		"m_version": {
+			"m_flags": 1,
+			"m_major": 3,
+			"m_minor": 0,
+			"m_revision": 4,
+			"m_build": 38996,
+			"m_baseBuild": 38996
+		},
+		"m_type": 2,
+		"m_elapsedGameLoops": 12255,
+		"m_useScaledTime": true
+	},
+	"details": {
+		"m_playerList": [
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [108, 112, 114, 111, 100, 117, 99, 116, 105, 111, 110, 115]
+				},
+				"m_toon": {
+					"m_region": 2,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 83, 50]
+					},
+					"m_realm": 1,
+					"m_id": 4746605
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [90, 101, 114, 103]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 28,
+					"m_g": 167,
+					"m_b": 234
+				},
+				"m_control": 2,
+				"m_teamId": 0,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 1,
+				"m_workingSetSlotId": 0
+			},
+			{
+				"m_name": {
+					"type": "Buffer",
+					"data": [
+						65, 46, 73, 46, 32, 49, 32, 40, 86, 101, 114, 121, 32, 69, 97, 115, 121, 41
+					]
+				},
+				"m_toon": {
+					"m_region": 0,
+					"m_programId": {
+						"type": "Buffer",
+						"data": [0, 0, 0, 0]
+					},
+					"m_realm": 0,
+					"m_id": 0
+				},
+				"m_race": {
+					"type": "Buffer",
+					"data": [90, 101, 114, 103]
+				},
+				"m_color": {
+					"m_a": 255,
+					"m_r": 0,
+					"m_g": 66,
+					"m_b": 255
+				},
+				"m_control": 3,
+				"m_teamId": 1,
+				"m_handicap": 100,
+				"m_observe": 0,
+				"m_result": 2,
+				"m_workingSetSlotId": 1
+			}
+		],
+		"m_title": {
+			"type": "Buffer",
+			"data": [68, 117, 115, 107, 32, 84, 111, 119, 101, 114, 115]
+		},
+		"m_difficulty": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_thumbnail": {
+			"m_file": {
+				"type": "Buffer",
+				"data": [77, 105, 110, 105, 109, 97, 112, 46, 116, 103, 97]
+			}
+		},
+		"m_isBlizzardMap": true,
+		"m_timeUTC": "130918406052131031",
+		"m_timeLocalOffset": 0,
+		"m_description": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_imageFilePath": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_mapFileName": {
+			"type": "Buffer",
+			"data": []
+		},
+		"m_cacheHandles": [
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 109, 228, 21, 3, 186, 204, 208, 86, 86, 54, 11,
+					111, 2, 125, 184, 129, 105, 250, 25, 137, 187, 99, 87, 177, 178, 21, 162, 84,
+					121, 57, 245, 251
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 66, 28, 138, 160, 243, 97, 155, 101, 45, 35,
+					162, 115, 93, 254, 232, 18, 171, 100, 66, 40, 35, 94, 122, 121, 126, 222, 207,
+					232, 182, 125, 163, 14
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 102, 9, 56, 50, 18, 132, 83, 239, 255, 187, 120,
+					124, 128, 183, 211, 238, 193, 173, 129, 189, 229, 92, 131, 201, 48, 222, 167,
+					156, 78, 80, 90, 4
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 217, 45, 252, 72, 196, 132, 197, 145, 84, 39,
+					11, 146, 74, 215, 213, 116, 132, 242, 171, 154, 71, 98, 28, 122, 177, 100, 49,
+					191, 102, 197, 59, 64
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 87, 180, 172, 11, 61, 218, 208, 84, 186, 223,
+					133, 169, 76, 102, 110, 87, 228, 118, 157, 8, 120, 202, 150, 114, 7, 158, 201,
+					54, 184, 11, 152, 220
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 127, 65, 65, 26, 165, 151, 244, 180, 100, 64,
+					212, 42, 86, 51, 72, 191, 83, 130, 45, 42, 104, 17, 47, 1, 4, 249, 184, 145,
+					246, 240, 90, 225
+				]
+			},
+			{
+				"type": "Buffer",
+				"data": [
+					115, 50, 109, 97, 0, 0, 69, 85, 251, 201, 106, 141, 169, 117, 45, 6, 4, 157,
+					218, 33, 226, 18, 89, 21, 167, 82, 127, 189, 57, 123, 144, 7, 194, 142, 106, 13,
+					79, 55, 35, 113
+				]
+			}
+		],
+		"m_miniSave": false,
+		"m_gameSpeed": 4,
+		"m_defaultDifficulty": 3,
+		"m_modPaths": null,
+		"m_campaignIndex": 0,
+		"m_restartAsTransitionMap": false
+	},
+	"initData": {
+		"m_syncLobbyState": {
+			"m_userInitialData": [
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [108, 112, 114, 111, 100, 117, 99, 116, 105, 111, 110, 115]
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": 8,
+					"m_combinedRaceLevels": 55,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 16,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": true,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0]
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 1048620,
+					"m_racePreference": {
+						"m_race": 255
+					},
+					"m_teamPreference": {
+						"m_team": 255
+					},
+					"m_testMap": true,
+					"m_testAuto": true,
+					"m_examine": true,
+					"m_customInterface": true,
+					"m_observe": 3
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252, 255, 255,
+							255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252,
+							255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+							2, 252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 1, 0, 2, 252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 1, 0, 2, 252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252, 255, 255, 255, 7, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252, 255, 255, 255, 7,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252, 255, 255,
+							255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 252,
+							255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0
+						]
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 4098,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 3
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [
+							255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2,
+							252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							1, 0, 2, 252, 255, 255, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 118, 179, 83, 26, 1, 0, 68, 102, 108, 116, 17, 4, 0, 0, 0, 0, 0,
+							0, 0, 132, 9, 114, 4, 65, 2, 1, 176, 184, 60, 167, 82, 42, 0, 0, 13, 50,
+							45, 83, 50, 45, 49, 45, 49, 54, 53, 50, 53, 49, 91, 27, 116, 126, 80,
+							248, 223, 7, 187, 240, 224, 112, 0, 240, 255, 255, 255, 255, 255, 255,
+							255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+							255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+							125, 0, 0, 192, 1, 127, 60, 0, 192, 3, 31, 28, 0, 192, 7, 31, 28, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 247, 31, 227, 224, 248, 28,
+							0, 192, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+							255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+							255, 255, 255, 255, 255, 255, 255, 127, 64, 0, 48, 0, 95, 207, 0, 192,
+							0, 199, 199, 0, 48, 1, 199, 31, 0
+						]
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 538968112,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": true,
+					"m_examine": false,
+					"m_customInterface": true,
+					"m_observe": 3
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": [
+							0, 0, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 255, 127, 208, 0, 12, 0, 23, 243,
+							192, 192, 0, 49, 241, 12, 12, 0, 113, 31, 192, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 64, 0, 128, 2, 129, 252, 129, 192, 0, 252, 7, 192, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 254, 127, 244, 0, 3, 0, 5, 252, 240, 192, 0, 12, 124, 28,
+							3, 0, 28, 31, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 32,
+							0, 131, 240, 224, 112, 0, 240, 15, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 125,
+							0, 0, 192, 1, 127, 60, 0, 192, 3, 31, 28, 0, 192, 7, 31, 28, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 8, 0, 3, 224, 248, 28, 0, 192, 63,
+							28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+						]
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": {
+						"type": "Buffer",
+						"data": [
+							64, 0, 48, 0, 95, 207, 0, 192, 0, 199, 199, 0, 48, 1, 199, 31, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 2, 0, 3, 128, 254, 7, 0, 0, 255,
+							7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 128, 255, 127, 208, 0, 12, 0, 23, 243, 192, 192, 0,
+							49, 241, 12, 12, 0, 113, 31, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 64, 0, 128, 2, 129, 252, 129, 192, 0, 252, 7, 192, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							254, 127, 244, 0, 3, 0, 5, 252, 240, 192, 0, 12, 124, 28, 3, 0, 28, 31,
+							112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 32, 0, 131, 240,
+							224, 112, 0, 240, 15, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 125, 0, 0, 192,
+							1, 127, 60, 0, 192, 3, 31, 28, 0, 192, 7, 31, 28, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 0, 0
+						]
+					},
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 32832,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": true,
+					"m_observe": 1
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": -239072241,
+					"m_randomSeed": 834666496,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				},
+				{
+					"m_name": {
+						"type": "Buffer",
+						"data": []
+					},
+					"m_clanTag": null,
+					"m_clanLogo": null,
+					"m_highestLeague": null,
+					"m_combinedRaceLevels": null,
+					"m_randomSeed": 0,
+					"m_racePreference": {
+						"m_race": null
+					},
+					"m_teamPreference": {
+						"m_team": null
+					},
+					"m_testMap": false,
+					"m_testAuto": false,
+					"m_examine": false,
+					"m_customInterface": false,
+					"m_observe": 0
+				}
+			],
+			"m_gameDescription": {
+				"m_randomValue": 0,
+				"m_gameCacheName": {
+					"type": "Buffer",
+					"data": []
+				},
+				"m_gameOptions": {
+					"m_lockTeams": false,
+					"m_teamsTogether": false,
+					"m_advancedSharedControl": false,
+					"m_randomRaces": false,
+					"m_battleNet": false,
+					"m_amm": false,
+					"m_competitive": false,
+					"m_noVictoryOrDefeat": false,
+					"m_fog": 0,
+					"m_observers": 0,
+					"m_userDifficulty": 0,
+					"m_clientDebugFlags": "3686399"
+				},
+				"m_gameSpeed": 2,
+				"m_gameType": 0,
+				"m_maxUsers": 8,
+				"m_maxObservers": 0,
+				"m_maxPlayers": 0,
+				"m_maxTeams": 7,
+				"m_maxColors": 0,
+				"m_maxRaces": 32,
+				"m_maxControls": 79,
+				"m_mapSizeX": 192,
+				"m_mapSizeY": 0,
+				"m_mapFileSyncChecksum": -1072105248,
+				"m_mapFileName": {
+					"type": "Buffer",
+					"data": [
+						1, 199, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 2, 0, 3, 128,
+						254, 7, 0, 0, 255, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0
+					]
+				},
+				"m_mapAuthorName": {
+					"type": "Buffer",
+					"data": []
+				},
+				"m_modFileSyncChecksum": 0,
+				"m_slotDescriptions": [],
+				"m_defaultDifficulty": 0,
+				"m_defaultAIBuild": 0,
+				"m_cacheHandles": [],
+				"m_hasExtensionMod": false,
+				"m_isBlizzardMap": false,
+				"m_isPremadeFFA": false,
+				"m_isCoopMode": false
+			},
+			"m_lobbyState": {
+				"m_phase": 0,
+				"m_maxUsers": 0,
+				"m_maxObservers": 0,
+				"m_slots": [],
+				"m_randomSeed": 541056976,
+				"m_hostUserId": 8,
+				"m_isSinglePlayer": false,
+				"m_gameDuration": 12583283,
+				"m_defaultDifficulty": 60,
+				"m_defaultAIBuild": 96
+			}
+		}
+	},
+	"metadata": null,
+	"attributes": {
+		"source": 0,
+		"mapNamespace": 0,
+		"scopes": {
+			"1": {
+				"500": [
+					{
+						"namespace": 999,
+						"attrid": 500,
+						"value": "Humn"
+					}
+				],
+				"2002": [
+					{
+						"namespace": 999,
+						"attrid": 2002,
+						"value": "T1"
+					}
+				],
+				"2003": [
+					{
+						"namespace": 999,
+						"attrid": 2003,
+						"value": "T1"
+					}
+				],
+				"2004": [
+					{
+						"namespace": 999,
+						"attrid": 2004,
+						"value": "T1"
+					}
+				],
+				"2005": [
+					{
+						"namespace": 999,
+						"attrid": 2005,
+						"value": "T1"
+					}
+				],
+				"2006": [
+					{
+						"namespace": 999,
+						"attrid": 2006,
+						"value": "T1"
+					}
+				],
+				"2007": [
+					{
+						"namespace": 999,
+						"attrid": 2007,
+						"value": "T1"
+					}
+				],
+				"2008": [
+					{
+						"namespace": 999,
+						"attrid": 2008,
+						"value": "T1"
+					}
+				],
+				"2011": [
+					{
+						"namespace": 999,
+						"attrid": 2011,
+						"value": "T1"
+					}
+				],
+				"2018": [
+					{
+						"namespace": 999,
+						"attrid": 2018,
+						"value": "T1"
+					}
+				],
+				"2024": [
+					{
+						"namespace": 999,
+						"attrid": 2024,
+						"value": "T1"
+					}
+				],
+				"3001": [
+					{
+						"namespace": 999,
+						"attrid": 3001,
+						"value": "Zerg"
+					}
+				],
+				"3002": [
+					{
+						"namespace": 999,
+						"attrid": 3002,
+						"value": "tc03"
+					}
+				],
+				"3003": [
+					{
+						"namespace": 999,
+						"attrid": 3003,
+						"value": " 100"
+					}
+				],
+				"3004": [
+					{
+						"namespace": 999,
+						"attrid": 3004,
+						"value": "Medi"
+					}
+				],
+				"3007": [
+					{
+						"namespace": 999,
+						"attrid": 3007,
+						"value": "Part"
+					}
+				],
+				"3008": [
+					{
+						"namespace": 999,
+						"attrid": 3008,
+						"value": "Obs"
+					}
+				],
+				"3011": [
+					{
+						"namespace": 999,
+						"attrid": 3011,
+						"value": "   0"
+					}
+				],
+				"3012": [
+					{
+						"namespace": 999,
+						"attrid": 3012,
+						"value": "  22"
+					}
+				],
+				"3013": [
+					{
+						"namespace": 999,
+						"attrid": 3013,
+						"value": ""
+					}
+				],
+				"3014": [
+					{
+						"namespace": 999,
+						"attrid": 3014,
+						"value": "   1"
+					}
+				],
+				"3102": [
+					{
+						"namespace": 999,
+						"attrid": 3102,
+						"value": "AB00"
+					}
+				],
+				"3103": [
+					{
+						"namespace": 999,
+						"attrid": 3103,
+						"value": "AB00"
+					}
+				],
+				"3104": [
+					{
+						"namespace": 999,
+						"attrid": 3104,
+						"value": "AB00"
+					}
+				],
+				"3105": [
+					{
+						"namespace": 999,
+						"attrid": 3105,
+						"value": "AB00"
+					}
+				],
+				"3106": [
+					{
+						"namespace": 999,
+						"attrid": 3106,
+						"value": "AB00"
+					}
+				],
+				"3107": [
+					{
+						"namespace": 999,
+						"attrid": 3107,
+						"value": "AB00"
+					}
+				],
+				"3108": [
+					{
+						"namespace": 999,
+						"attrid": 3108,
+						"value": "AB00"
+					}
+				],
+				"3109": [
+					{
+						"namespace": 999,
+						"attrid": 3109,
+						"value": "AB00"
+					}
+				],
+				"3110": [
+					{
+						"namespace": 999,
+						"attrid": 3110,
+						"value": "AB00"
+					}
+				],
+				"3111": [
+					{
+						"namespace": 999,
+						"attrid": 3111,
+						"value": "AB00"
+					}
+				],
+				"3134": [
+					{
+						"namespace": 999,
+						"attrid": 3134,
+						"value": "AB00"
+					}
+				],
+				"3135": [
+					{
+						"namespace": 999,
+						"attrid": 3135,
+						"value": "AB00"
+					}
+				],
+				"3136": [
+					{
+						"namespace": 999,
+						"attrid": 3136,
+						"value": "AB00"
+					}
+				],
+				"3137": [
+					{
+						"namespace": 999,
+						"attrid": 3137,
+						"value": "AB00"
+					}
+				],
+				"3138": [
+					{
+						"namespace": 999,
+						"attrid": 3138,
+						"value": "AB00"
+					}
+				],
+				"3139": [
+					{
+						"namespace": 999,
+						"attrid": 3139,
+						"value": "AB00"
+					}
+				],
+				"3140": [
+					{
+						"namespace": 999,
+						"attrid": 3140,
+						"value": "AB00"
+					}
+				],
+				"3141": [
+					{
+						"namespace": 999,
+						"attrid": 3141,
+						"value": "AB00"
+					}
+				],
+				"3142": [
+					{
+						"namespace": 999,
+						"attrid": 3142,
+						"value": "AB00"
+					}
+				],
+				"3143": [
+					{
+						"namespace": 999,
+						"attrid": 3143,
+						"value": "AB00"
+					}
+				],
+				"3166": [
+					{
+						"namespace": 999,
+						"attrid": 3166,
+						"value": "AB00"
+					}
+				],
+				"3167": [
+					{
+						"namespace": 999,
+						"attrid": 3167,
+						"value": "AB00"
+					}
+				],
+				"3168": [
+					{
+						"namespace": 999,
+						"attrid": 3168,
+						"value": "AB00"
+					}
+				],
+				"3169": [
+					{
+						"namespace": 999,
+						"attrid": 3169,
+						"value": "AB00"
+					}
+				],
+				"3170": [
+					{
+						"namespace": 999,
+						"attrid": 3170,
+						"value": "AB00"
+					}
+				],
+				"3171": [
+					{
+						"namespace": 999,
+						"attrid": 3171,
+						"value": "AB00"
+					}
+				],
+				"3172": [
+					{
+						"namespace": 999,
+						"attrid": 3172,
+						"value": "AB00"
+					}
+				],
+				"3173": [
+					{
+						"namespace": 999,
+						"attrid": 3173,
+						"value": "AB00"
+					}
+				],
+				"3174": [
+					{
+						"namespace": 999,
+						"attrid": 3174,
+						"value": "AB00"
+					}
+				],
+				"3175": [
+					{
+						"namespace": 999,
+						"attrid": 3175,
+						"value": "AB00"
+					}
+				],
+				"3198": [
+					{
+						"namespace": 999,
+						"attrid": 3198,
+						"value": "AB00"
+					}
+				],
+				"3199": [
+					{
+						"namespace": 999,
+						"attrid": 3199,
+						"value": "AB00"
+					}
+				],
+				"3200": [
+					{
+						"namespace": 999,
+						"attrid": 3200,
+						"value": "AB00"
+					}
+				],
+				"3201": [
+					{
+						"namespace": 999,
+						"attrid": 3201,
+						"value": "AB00"
+					}
+				],
+				"3202": [
+					{
+						"namespace": 999,
+						"attrid": 3202,
+						"value": "AB00"
+					}
+				],
+				"3203": [
+					{
+						"namespace": 999,
+						"attrid": 3203,
+						"value": "AB00"
+					}
+				],
+				"3204": [
+					{
+						"namespace": 999,
+						"attrid": 3204,
+						"value": "AB00"
+					}
+				],
+				"3205": [
+					{
+						"namespace": 999,
+						"attrid": 3205,
+						"value": "AB00"
+					}
+				],
+				"3206": [
+					{
+						"namespace": 999,
+						"attrid": 3206,
+						"value": "AB00"
+					}
+				],
+				"3207": [
+					{
+						"namespace": 999,
+						"attrid": 3207,
+						"value": "AB00"
+					}
+				],
+				"4001": [
+					{
+						"namespace": 999,
+						"attrid": 4001,
+						"value": "no"
+					}
+				],
+				"4005": [
+					{
+						"namespace": 999,
+						"attrid": 4005,
+						"value": "no"
+					}
+				]
+			},
+			"2": {
+				"500": [
+					{
+						"namespace": 999,
+						"attrid": 500,
+						"value": "Comp"
+					}
+				],
+				"2002": [
+					{
+						"namespace": 999,
+						"attrid": 2002,
+						"value": "T2"
+					}
+				],
+				"2003": [
+					{
+						"namespace": 999,
+						"attrid": 2003,
+						"value": "T2"
+					}
+				],
+				"2004": [
+					{
+						"namespace": 999,
+						"attrid": 2004,
+						"value": "T2"
+					}
+				],
+				"2005": [
+					{
+						"namespace": 999,
+						"attrid": 2005,
+						"value": "T2"
+					}
+				],
+				"2006": [
+					{
+						"namespace": 999,
+						"attrid": 2006,
+						"value": "T2"
+					}
+				],
+				"2007": [
+					{
+						"namespace": 999,
+						"attrid": 2007,
+						"value": "T2"
+					}
+				],
+				"2008": [
+					{
+						"namespace": 999,
+						"attrid": 2008,
+						"value": "T2"
+					}
+				],
+				"2011": [
+					{
+						"namespace": 999,
+						"attrid": 2011,
+						"value": "T2"
+					}
+				],
+				"2018": [
+					{
+						"namespace": 999,
+						"attrid": 2018,
+						"value": "T2"
+					}
+				],
+				"2024": [
+					{
+						"namespace": 999,
+						"attrid": 2024,
+						"value": "T2"
+					}
+				],
+				"3001": [
+					{
+						"namespace": 999,
+						"attrid": 3001,
+						"value": "RAND"
+					}
+				],
+				"3002": [
+					{
+						"namespace": 999,
+						"attrid": 3002,
+						"value": "tc02"
+					}
+				],
+				"3003": [
+					{
+						"namespace": 999,
+						"attrid": 3003,
+						"value": " 100"
+					}
+				],
+				"3004": [
+					{
+						"namespace": 999,
+						"attrid": 3004,
+						"value": "VyEy"
+					}
+				],
+				"3007": [
+					{
+						"namespace": 999,
+						"attrid": 3007,
+						"value": "Part"
+					}
+				],
+				"3008": [
+					{
+						"namespace": 999,
+						"attrid": 3008,
+						"value": "Obs"
+					}
+				],
+				"3011": [
+					{
+						"namespace": 999,
+						"attrid": 3011,
+						"value": "   0"
+					}
+				],
+				"3012": [
+					{
+						"namespace": 999,
+						"attrid": 3012,
+						"value": "  22"
+					}
+				],
+				"3013": [
+					{
+						"namespace": 999,
+						"attrid": 3013,
+						"value": ""
+					}
+				],
+				"3014": [
+					{
+						"namespace": 999,
+						"attrid": 3014,
+						"value": "   1"
+					}
+				],
+				"3102": [
+					{
+						"namespace": 999,
+						"attrid": 3102,
+						"value": "AB00"
+					}
+				],
+				"3103": [
+					{
+						"namespace": 999,
+						"attrid": 3103,
+						"value": "AB00"
+					}
+				],
+				"3104": [
+					{
+						"namespace": 999,
+						"attrid": 3104,
+						"value": "AB00"
+					}
+				],
+				"3105": [
+					{
+						"namespace": 999,
+						"attrid": 3105,
+						"value": "AB00"
+					}
+				],
+				"3106": [
+					{
+						"namespace": 999,
+						"attrid": 3106,
+						"value": "AB00"
+					}
+				],
+				"3107": [
+					{
+						"namespace": 999,
+						"attrid": 3107,
+						"value": "AB00"
+					}
+				],
+				"3108": [
+					{
+						"namespace": 999,
+						"attrid": 3108,
+						"value": "AB00"
+					}
+				],
+				"3109": [
+					{
+						"namespace": 999,
+						"attrid": 3109,
+						"value": "AB00"
+					}
+				],
+				"3110": [
+					{
+						"namespace": 999,
+						"attrid": 3110,
+						"value": "AB00"
+					}
+				],
+				"3111": [
+					{
+						"namespace": 999,
+						"attrid": 3111,
+						"value": "AB00"
+					}
+				],
+				"3134": [
+					{
+						"namespace": 999,
+						"attrid": 3134,
+						"value": "AB00"
+					}
+				],
+				"3135": [
+					{
+						"namespace": 999,
+						"attrid": 3135,
+						"value": "AB00"
+					}
+				],
+				"3136": [
+					{
+						"namespace": 999,
+						"attrid": 3136,
+						"value": "AB00"
+					}
+				],
+				"3137": [
+					{
+						"namespace": 999,
+						"attrid": 3137,
+						"value": "AB00"
+					}
+				],
+				"3138": [
+					{
+						"namespace": 999,
+						"attrid": 3138,
+						"value": "AB00"
+					}
+				],
+				"3139": [
+					{
+						"namespace": 999,
+						"attrid": 3139,
+						"value": "AB00"
+					}
+				],
+				"3140": [
+					{
+						"namespace": 999,
+						"attrid": 3140,
+						"value": "AB00"
+					}
+				],
+				"3141": [
+					{
+						"namespace": 999,
+						"attrid": 3141,
+						"value": "AB00"
+					}
+				],
+				"3142": [
+					{
+						"namespace": 999,
+						"attrid": 3142,
+						"value": "AB00"
+					}
+				],
+				"3143": [
+					{
+						"namespace": 999,
+						"attrid": 3143,
+						"value": "AB00"
+					}
+				],
+				"3166": [
+					{
+						"namespace": 999,
+						"attrid": 3166,
+						"value": "AB00"
+					}
+				],
+				"3167": [
+					{
+						"namespace": 999,
+						"attrid": 3167,
+						"value": "AB00"
+					}
+				],
+				"3168": [
+					{
+						"namespace": 999,
+						"attrid": 3168,
+						"value": "AB00"
+					}
+				],
+				"3169": [
+					{
+						"namespace": 999,
+						"attrid": 3169,
+						"value": "AB00"
+					}
+				],
+				"3170": [
+					{
+						"namespace": 999,
+						"attrid": 3170,
+						"value": "AB00"
+					}
+				],
+				"3171": [
+					{
+						"namespace": 999,
+						"attrid": 3171,
+						"value": "AB00"
+					}
+				],
+				"3172": [
+					{
+						"namespace": 999,
+						"attrid": 3172,
+						"value": "AB00"
+					}
+				],
+				"3173": [
+					{
+						"namespace": 999,
+						"attrid": 3173,
+						"value": "AB00"
+					}
+				],
+				"3174": [
+					{
+						"namespace": 999,
+						"attrid": 3174,
+						"value": "AB00"
+					}
+				],
+				"3175": [
+					{
+						"namespace": 999,
+						"attrid": 3175,
+						"value": "AB00"
+					}
+				],
+				"3198": [
+					{
+						"namespace": 999,
+						"attrid": 3198,
+						"value": "AB00"
+					}
+				],
+				"3199": [
+					{
+						"namespace": 999,
+						"attrid": 3199,
+						"value": "AB00"
+					}
+				],
+				"3200": [
+					{
+						"namespace": 999,
+						"attrid": 3200,
+						"value": "AB00"
+					}
+				],
+				"3201": [
+					{
+						"namespace": 999,
+						"attrid": 3201,
+						"value": "AB00"
+					}
+				],
+				"3202": [
+					{
+						"namespace": 999,
+						"attrid": 3202,
+						"value": "AB00"
+					}
+				],
+				"3203": [
+					{
+						"namespace": 999,
+						"attrid": 3203,
+						"value": "AB00"
+					}
+				],
+				"3204": [
+					{
+						"namespace": 999,
+						"attrid": 3204,
+						"value": "AB00"
+					}
+				],
+				"3205": [
+					{
+						"namespace": 999,
+						"attrid": 3205,
+						"value": "AB00"
+					}
+				],
+				"3206": [
+					{
+						"namespace": 999,
+						"attrid": 3206,
+						"value": "AB00"
+					}
+				],
+				"3207": [
+					{
+						"namespace": 999,
+						"attrid": 3207,
+						"value": "AB00"
+					}
+				],
+				"4001": [
+					{
+						"namespace": 999,
+						"attrid": 4001,
+						"value": "no"
+					}
+				],
+				"4005": [
+					{
+						"namespace": 999,
+						"attrid": 4005,
+						"value": "no"
+					}
+				]
+			},
+			"16": {
+				"1000": [
+					{
+						"namespace": 999,
+						"attrid": 1000,
+						"value": "Dflt"
+					}
+				],
+				"1001": [
+					{
+						"namespace": 999,
+						"attrid": 1001,
+						"value": "yes"
+					}
+				],
+				"2000": [
+					{
+						"namespace": 999,
+						"attrid": 2000,
+						"value": "t2"
+					}
+				],
+				"2001": [
+					{
+						"namespace": 999,
+						"attrid": 2001,
+						"value": "1v1"
+					}
+				],
+				"3000": [
+					{
+						"namespace": 999,
+						"attrid": 3000,
+						"value": "Fasr"
+					}
+				],
+				"3006": [
+					{
+						"namespace": 999,
+						"attrid": 3006,
+						"value": "10"
+					}
+				],
+				"3009": [
+					{
+						"namespace": 999,
+						"attrid": 3009,
+						"value": "Priv"
+					}
+				],
+				"3010": [
+					{
+						"namespace": 999,
+						"attrid": 3010,
+						"value": "yes"
+					}
+				],
+				"3015": [
+					{
+						"namespace": 999,
+						"attrid": 3015,
+						"value": "0"
+					}
+				],
+				"4000": [
+					{
+						"namespace": 999,
+						"attrid": 4000,
+						"value": "Norm"
+					}
+				]
+			}
+		}
+	},
+	"firstTrackerEvent": {
+		"m_playerId": 1,
+		"m_type": 1,
+		"m_userId": 0,
+		"m_slotId": 0,
+		"_event": "NNet.Replay.Tracker.SPlayerSetupEvent",
+		"_eventid": 9,
+		"_gameloop": 0,
+		"_bits": 192
+	},
+	"firstGameEvent": {
+		"m_syncInfo": {
+			"m_soundHash": [
+				-101103124, 34975660, 1051398821, -1374275266, 1636575940, 2096591071, -97962802,
+				1696743476, 805102204, 1425313678, -655188527, 610193556, 667204077, 155361826,
+				-341710625, 1508928727, 1272566587, -884419413, 1744822412, 29762163, 1000573945,
+				-890650599, 879615576, 1955071389, -388943657, 1561302360, -121439896, 526824759,
+				657005092, 1024822592, -1841722695, 1157976390, 66067640, 377202581, -1815224928,
+				1682168586, -42850877, -584468546, -1576254469, -418056512, 254165062, 170213851,
+				-942955348, -1742797427, 1646761961, -99997213, 286846085, -1879785182, 1159665767,
+				1920426428, 1604849242, -795156344, 1425572526, 700713039, -534069851, -257352754,
+				-678567651, -1386793811, -1511418421, 522555016, -832273154, -1631902534,
+				2047167777, -1162542243, -668319975, 767252675, 472213006, 1530414146, 371513421,
+				-1514100697, -2076531463, -337819173, -1187865735, -1266807576, 1238995791,
+				-131571783, 615815052, -1566965753, 1859147446, 988125766, -782766870, -768352074,
+				1410008154, -1752626011, -273622801, 109689345, -2068198454, -1594835795,
+				-992506332, 2073626334, 2015800703, 1409746033, -1519606438, 324959380, -1907646259,
+				-1783795846, -1252343982, 1272313176, 1767014751, -1083891466, 655102287, 716264860,
+				651486182, -1112355764, -1355329557, -600429611, -603897640, -1240423688
+			],
+			"m_length": [
+				4797, 4960, 3986, 4436, 4271, 4365, 4932, 4591, 4323, 5027, 2075, 1555, 1950, 1888,
+				2328, 2289, 2592, 2700, 2742, 2726, 4027, 4301, 3602, 4453, 3737, 3751, 4285, 4190,
+				3698, 4017, 3219, 2834, 2570, 2897, 2730, 2652, 2530, 3050, 2918, 2620, 4010, 3471,
+				3057, 3661, 3655, 3127, 2146, 2426, 2252, 2147, 263, 601, 210, 234, 800, 782, 694,
+				1067, 440, 367, 351, 951, 1085, 1086, 1155, 1322, 1362, 1430, 2386, 2273, 2998,
+				2649, 2302, 1966, 1721, 1583, 1764, 1586, 1492, 1780, 1367, 1317, 1364, 1606, 1870,
+				1551, 1651, 709, 836, 695, 1001, 1018, 1127, 561, 529, 398, 480, 410, 480, 553, 503,
+				493, 717, 1101, 1291, 1107, 1211, 1424
+			]
+		},
+		"_event": "NNet.Game.STriggerSoundLengthSyncEvent",
+		"_eventid": 56,
+		"_gameloop": 0,
+		"_userid": {
+			"m_userId": 0
+		},
+		"_bits": 6952
+	},
+	"firstMessageEvent": null
 }

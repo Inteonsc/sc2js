@@ -7,17 +7,21 @@ export class BitPackedBuffer {
 		this.bigEndian = Endian === "big";
 	}
 
-	finished() { return this.bytesRead >= this.data.length && this.nextBitsLeft === 0; }
+	finished() {
+		return this.bytesRead >= this.data.length && this.nextBitsLeft === 0;
+	}
 
-	usedBits() { return this.bytesRead * 8 - this.nextBitsLeft; }
+	usedBits() {
+		return this.bytesRead * 8 - this.nextBitsLeft;
+	}
 
-	byteAlign() { this.nextBitsLeft = 0; }
+	byteAlign() {
+		this.nextBitsLeft = 0;
+	}
 
 	readAlignedBytes(numBytes) {
 		this.byteAlign();
-		const result = Buffer.from(
-			this.data.subarray(this.bytesRead, this.bytesRead + numBytes),
-		);
+		const result = Buffer.from(this.data.subarray(this.bytesRead, this.bytesRead + numBytes));
 		this.bytesRead += numBytes;
 		if (result.length < numBytes) {
 			throw new Error("Attempted to read past end of buffer");
@@ -55,7 +59,6 @@ export class BitPackedBuffer {
 		return result;
 	}
 	#readBigBits(numBits) {
-		
 		let result = 0n;
 		let bitsRead = 0n;
 		let totalBits = BigInt(numBits);
@@ -68,9 +71,7 @@ export class BitPackedBuffer {
 				this.bytesRead++;
 				this.nextBitsLeft = 8;
 			}
-			const bitsToRead = BigInt(
-				Math.min(Number(totalBits - bitsRead), this.nextBitsLeft),
-			);
+			const bitsToRead = BigInt(Math.min(Number(totalBits - bitsRead), this.nextBitsLeft));
 			const copy = BigInt(this.nextByte) & ((1n << bitsToRead) - 1n);
 			if (this.bigEndian) {
 				result |= copy << (totalBits - bitsRead - bitsToRead);
@@ -102,16 +103,22 @@ export class BitPackedDecoder {
 	instance(typeid) {
 		if (typeid >= this.typeInfos.length) {
 			throw new Error(
-				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`,
+				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`
 			);
 		}
 		const typeinfo = this.typeInfos[typeid];
 		return this[typeinfo[0]](...typeinfo[1]);
 	}
 
-	byteAlign() { this.buffer.byteAlign(); }
-	finished() { return this.buffer.finished(); }
-	usedBits() { return this.buffer.usedBits(); }
+	byteAlign() {
+		this.buffer.byteAlign();
+	}
+	finished() {
+		return this.buffer.finished();
+	}
+	usedBits() {
+		return this.buffer.usedBits();
+	}
 
 	_array(bounds, typeid) {
 		const length = this._int(bounds);
@@ -150,12 +157,12 @@ export class BitPackedDecoder {
 		return this.buffer.readUnalignedBytes(4);
 	}
 
-	_int(bounds) {  
-        const value = this.buffer.readBits(bounds[1]);
-      
-        if (typeof value === "bigint"){
-            return BigInt(bounds[0]) + value;
-        }
+	_int(bounds) {
+		const value = this.buffer.readBits(bounds[1]);
+
+		if (typeof value === "bigint") {
+			return BigInt(bounds[0]) + value;
+		}
 		return bounds[0] + value;
 	}
 
@@ -182,11 +189,7 @@ export class BitPackedDecoder {
 		for (const field of fields) {
 			if (field[0] === "__parent") {
 				const parent = this.instance(field[1]);
-				if (
-					typeof parent === "object" &&
-					!Array.isArray(parent) &&
-					parent !== null
-				) {
+				if (typeof parent === "object" && !Array.isArray(parent) && parent !== null) {
 					Object.assign(result, parent);
 				} else if (fields.length === 1) {
 					return parent;
@@ -210,16 +213,22 @@ export class VersionedDecoder {
 	instance(typeid) {
 		if (typeid >= this.typeInfos.length) {
 			throw new Error(
-				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`,
+				`Typeid ${typeid} out of bounds for typeInfos of length ${this.typeInfos.length}`
 			);
 		}
 		const typeinfo = this.typeInfos[typeid];
 		return this[typeinfo[0]](...typeinfo[1]);
 	}
 
-	byteAlign() { this.buffer.byteAlign(); }
-	finished() { return this.buffer.finished(); }
-	usedBits() { return this.buffer.usedBits(); }
+	byteAlign() {
+		this.buffer.byteAlign();
+	}
+	finished() {
+		return this.buffer.finished();
+	}
+	usedBits() {
+		return this.buffer.usedBits();
+	}
 
 	_expectSkip(expected) {
 		if (this.buffer.readBits(8) != expected) {
@@ -234,11 +243,11 @@ export class VersionedDecoder {
 		let bits = 6;
 		while ((b & 0x80) != 0) {
 			b = this.buffer.readBits(8);
-            if(bits >= 25){
-                result = BigInt(result) | (BigInt(b & 0x7f) << BigInt(bits))
-            }else{
-			    result |= (b & 0x7f) << bits;
-            }
+			if (bits >= 25) {
+				result = BigInt(result) | (BigInt(b & 0x7f) << BigInt(bits));
+			} else {
+				result |= (b & 0x7f) << bits;
+			}
 			bits += 7;
 		}
 		return negative ? -result : result;
@@ -257,10 +266,7 @@ export class VersionedDecoder {
 	_bitarray(bounds) {
 		this._expectSkip(1);
 		const length = this._vint();
-		return [
-			length,
-			this.buffer.readAlignedBytes(Math.floor((length + 7) / 8)),
-		];
+		return [length, this.buffer.readAlignedBytes(Math.floor((length + 7) / 8))];
 	}
 
 	_blob(bounds) {
@@ -327,11 +333,7 @@ export class VersionedDecoder {
 			if (field) {
 				if (field[0] === "__parent") {
 					const parent = this.instance(field[1]);
-					if (
-						typeof parent === "object" &&
-						!Array.isArray(parent) &&
-						parent !== null
-					) {
+					if (typeof parent === "object" && !Array.isArray(parent) && parent !== null) {
 						Object.assign(result, parent);
 					} else if (fields.length === 1) {
 						return parent;
@@ -351,34 +353,40 @@ export class VersionedDecoder {
 	_skipInstance() {
 		const skip = this.buffer.readBits(8);
 		switch (skip) {
-			case 0: { //array
+			case 0: {
+				//array
 				const length = this._vint();
 				for (let i = 0; i < length; i++) {
 					this._skipInstance();
 				}
 				break;
 			}
-			case 1: { //bitblob
+			case 1: {
+				//bitblob
 				const length = this._vint();
 				this.buffer.readAlignedBytes(Math.floor((length + 7) / 8));
 				break;
 			}
-			case 2: { // blob
+			case 2: {
+				// blob
 				const length = this._vint();
 				this.buffer.readAlignedBytes(length);
 				break;
 			}
-			case 3: { // choice
+			case 3: {
+				// choice
 				this._vint();
 				this._skipInstance();
 				break;
 			}
-			case 4: { // optional
+			case 4: {
+				// optional
 				const exists = this.buffer.readBits(8) !== 0;
 				if (exists) this._skipInstance();
 				break;
 			}
-			case 5: { // struct
+			case 5: {
+				// struct
 				const length = this._vint();
 				for (let i = 0; i < length; i++) {
 					this._vint();
@@ -403,6 +411,6 @@ export class VersionedDecoder {
 }
 
 // checks if something is a bitpacked buffer and converts it if not
-function checkBuffer(contents){
-    return contents instanceof BitPackedBuffer ? contents : new BitPackedBuffer(contents);
+function checkBuffer(contents) {
+	return contents instanceof BitPackedBuffer ? contents : new BitPackedBuffer(contents);
 }
