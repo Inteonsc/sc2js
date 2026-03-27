@@ -22,7 +22,6 @@ import {
 } from "./ReplayUtils.js";
 
 //TODO add string conversion for fields (cant just convert the entire file like we did with metadata)
-//TODO deal with errors and just return NO DATA for fields that dont exist etc
 export class SC2Replay {
 	#mpq;
 	#protocol;
@@ -33,39 +32,49 @@ export class SC2Replay {
 		this.#mpq = new MPQArchive(path, true);
 		const header = decodeReplayHeader(
 			this.#mpq.UserDataHeader.user_data_content,
-			loadProtocol(95299), // base protocol for header
+			loadProtocol(95299) // base protocol for header
 		);
 		this.#protocol = loadProtocol(header.m_version.m_baseBuild);
 	}
 
-    getListFiles(){
-        return this.#mpq.files;
-    }
+	getListFiles() {
+		return this.#mpq.files;
+	}
 
 	getHeader() {
-		if (this.#cache.header) return this.#cache.header;
+		if (this.#cache.header !== undefined) return this.#cache.header;
+
 		this.#cache.header = decodeReplayHeader(
 			this.#mpq.UserDataHeader.user_data_content,
-			this.#protocol,
+			this.#protocol
 		);
+
 		return this.#cache.header;
 	}
 
 	getDetails() {
-		if (this.#cache.details) return this.#cache.details;
-		this.#cache.details = decodeReplayDetails(
-			this.#mpq.readFile("replay.details"),
-			this.#protocol,
-		);
+		if (this.#cache.details !== undefined) return this.#cache.details;
+		try {
+			this.#cache.details = decodeReplayDetails(
+				this.#mpq.readFile("replay.details"),
+				this.#protocol
+			);
+		} catch {
+			this.#cache.details = null;
+		}
 		return this.#cache.details;
 	}
 
 	getInitData() {
-		if (this.#cache.initData) return this.#cache.initData;
-		this.#cache.initData = decodeReplayInitData(
-			this.#mpq.readFile("replay.initData"),
-			this.#protocol,
-		);
+		if (this.#cache.initData !== undefined) return this.#cache.initData;
+		try {
+			this.#cache.initData = decodeReplayInitData(
+				this.#mpq.readFile("replay.initData"),
+				this.#protocol
+			);
+		} catch {
+			this.#cache.initData = null;
+		}
 		return this.#cache.initData;
 	}
 
@@ -73,22 +82,23 @@ export class SC2Replay {
 		if (this.#cache.metadata !== undefined) return this.#cache.metadata;
 		try {
 			this.#cache.metadata = JSON.parse(
-				this.#mpq
-					.readFile("replay.gamemetadata.json")
-					.toString("utf-8"),
+				this.#mpq.readFile("replay.gamemetadata.json").toString("utf-8")
 			);
 		} catch (e) {
-			console.error("Failed to read metadata from:", this.path);
 			this.#cache.metadata = null;
 		}
 		return this.#cache.metadata;
 	}
 
 	getAttributeEvents() {
-		if (this.#cache.attributes) return this.#cache.attributes;
-		this.#cache.attributes = decodeReplayAttributesEvents(
-			this.#mpq.readFile("replay.attributes.events"),
-		);
+		if (this.#cache.attributes !== undefined) return this.#cache.attributes;
+		try {
+			this.#cache.attributes = decodeReplayAttributesEvents(
+				this.#mpq.readFile("replay.attributes.events")
+			);
+		} catch {
+			this.#cache.attributes = null;
+		}
 		return this.#cache.attributes;
 	}
 
@@ -97,25 +107,30 @@ export class SC2Replay {
 		try {
 			return decodeReplayTrackerEvents(
 				this.#mpq.readFile("replay.tracker.events"),
-				this.#protocol,
+				this.#protocol
 			);
-		} catch (e) {
-			return "Error: " + e.message;
+		} catch {
+			return [][Symbol.iterator]();
 		}
 	}
 
 	getGameEvents() {
-		return decodeReplayGameEvents(
-			this.#mpq.readFile("replay.game.events"),
-			this.#protocol,
-		);
+		try {
+			return decodeReplayGameEvents(this.#mpq.readFile("replay.game.events"), this.#protocol);
+		} catch {
+			return [][Symbol.iterator]();
+		}
 	}
 
 	getMessageEvents() {
-		return decodeReplayMessageEvents(
-			this.#mpq.readFile("replay.message.events"),
-			this.#protocol,
-		);
+		try {
+			return decodeReplayMessageEvents(
+				this.#mpq.readFile("replay.message.events"),
+				this.#protocol
+			);
+		} catch {
+			return [][Symbol.iterator]();
+		}
 	}
 
 	getBasicInfo() {
@@ -123,21 +138,23 @@ export class SC2Replay {
 			return this.#cache.basicInfo;
 		}
 		const details = this.getDetails();
+		if (!details) {
+			this.#cache.basicInfo = null;
+			return null;
+		}
 		const metadata = this.getMetadata();
 		const header = this.getHeader();
 		const attributes = this.getAttributeEvents();
 		const players = getPlayers(details, metadata);
+		const gameSpeed = getGameSpeed(attributes, details);
 		this.#cache.basicInfo = {
-			map: getMapName(metadata),
+			map: getMapName(metadata, details),
 			date: getDate(details),
-			version: getGameVersion(metadata),
+			version: getGameVersion(metadata, header),
 			players: players,
 			winner: getWinner(metadata),
-			gameSpeed: getGameSpeed(attributes),
-			duration: getRealDuration(
-				header.m_elapsedGameLoops,
-				getGameSpeed(attributes),
-			),
+			gameSpeed: gameSpeed,
+			duration: getRealDuration(header.m_elapsedGameLoops, gameSpeed),
 			isAIGame: isAIGame(players),
 			gamemode: getGamemode(attributes),
 		};

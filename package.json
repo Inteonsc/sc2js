@@ -1,26 +1,34 @@
 {
-  "name": "sc2js",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "exports": {
-    ".": "./index.js"
-  },
-  "scripts": {
-    "test": "vitest"
-  },
-  "keywords": ["starcraft", "sc2", "replay", "parser"],
-  "author": "Lili",
-  "license": "ISC",
-  "description": "A Javascript library for parsing StarCraft II replay files",
-  "files": [
-    "index.js",
-    "src/"
-  ],
-  "devDependencies": {
-    "vitest": "^4.0.18"
-  },
-  "dependencies": {
-    "compressjs": "^1.0.3"
-  }
+	"name": "sc2js",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"exports": {
+		".": "./index.js"
+	},
+	"scripts": {
+		"test": "vitest",
+		"format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\" \"utils/**/*.js\"",
+		"format:check": "prettier --check \"src/**/*.js\" \"tests/**/*.js\" \"utils/**/*.js\""
+	},
+	"keywords": [
+		"starcraft",
+		"sc2",
+		"replay",
+		"parser"
+	],
+	"author": "Lili",
+	"license": "ISC",
+	"description": "A Javascript library for parsing StarCraft II replay files",
+	"files": [
+		"index.js",
+		"src/"
+	],
+	"devDependencies": {
+		"prettier": "^3.8.1",
+		"vitest": "^4.0.18"
+	},
+	"dependencies": {
+		"compressjs": "^1.0.3"
+	}
 }

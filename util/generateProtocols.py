@@ -1,7 +1,6 @@
 # One time vibe coded script to convert the current s2protocols to json for use in sc2js
 
 import json
-import importlib
 import os
 import re
 import sys

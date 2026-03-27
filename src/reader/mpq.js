@@ -91,7 +91,6 @@ const HashType = {
     HASH_B: 2,
     TABLE: 3
 }
-//TODO: add support for listfiles
 export class MPQArchive {
 	constructor(replayFileName, listFiles) {
 		this.filename = replayFileName;
@@ -236,7 +235,6 @@ export class MPQArchive {
 
 	}
 
-	//TODO: add support for extracting the entire archive
 	extract() {
         if(!(this.files)) throw new Error("cannot extract without Listfile");
         if(this.files === "") throw new Error("Listfile Empty")
