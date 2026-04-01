@@ -21,7 +21,6 @@ import {
 	getWinner,
 } from "./ReplayUtils.js";
 
-//TODO add string conversion for fields (cant just convert the entire file like we did with metadata)
 export class SC2Replay {
 	#mpq;
 	#protocol;
@@ -157,6 +156,7 @@ export class SC2Replay {
 			duration: getRealDuration(header.m_elapsedGameLoops, gameSpeed),
 			isAIGame: isAIGame(players),
 			gamemode: getGamemode(attributes),
+			path: this.path,
 		};
 		return this.#cache.basicInfo;
 	}
