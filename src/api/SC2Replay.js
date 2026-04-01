@@ -160,4 +160,14 @@ export class SC2Replay {
 		};
 		return this.#cache.basicInfo;
 	}
+	getFullInfo() {
+		return {
+			basicInfo: this.getBasicInfo(),
+			header: this.getHeader(),
+			metadata: this.getMetadata(),
+			details: this.getDetails(),
+			initData: this.getInitData(),
+			attributes: this.getAttributeEvents(),
+		};
+	}
 }
