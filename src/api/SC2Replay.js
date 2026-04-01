@@ -156,6 +156,7 @@ export class SC2Replay {
 			duration: getRealDuration(header.m_elapsedGameLoops, gameSpeed),
 			isAIGame: isAIGame(players),
 			gamemode: getGamemode(attributes),
+			teams: getTeams(players),
 			path: this.path,
 		};
 		return this.#cache.basicInfo;

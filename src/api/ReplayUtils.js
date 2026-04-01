@@ -92,3 +92,12 @@ export function getGamemode(attributes) {
 export function isAIGame(players) {
 	return players.some((p) => p.details?.m_control === 3);
 }
+export function getTeams(players) {
+	const teams = {};
+	players.forEach((player) => {
+		const teamId = player.details.m_teamId;
+		if (!teams[teamId]) teams[teamId] = [];
+		teams[teamId].push(player);
+	});
+	return Object.values(teams);
+}
